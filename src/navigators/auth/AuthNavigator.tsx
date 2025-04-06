@@ -5,7 +5,7 @@ import RegisterPage from "./screens/RegisterPage";
 const Stack = createNativeStackNavigator();
 export function AuthNavigator() {
     return (
-        <Stack.Navigator initialRouteName={"Register"} screenOptions={{ headerShown: false }}>
+        <Stack.Navigator initialRouteName={"Login"} screenOptions={{ headerShown: false }}>
             <Stack.Screen name={"Login"} component={LoginPage}></Stack.Screen>
             <Stack.Screen name={"Register"} component={RegisterPage}></Stack.Screen>
         </Stack.Navigator>

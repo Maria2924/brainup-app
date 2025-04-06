@@ -4,6 +4,7 @@ import {ArrowLeft, ArrowRight} from "lucide-react-native";
 import ThemedTextInput from "../../../components/ThemedTextInput";
 import ThemedBirthDateInput from "../../../components/ThemedBirthDateInput";
 import { useNavigation } from "@react-navigation/native";
+import {ThemedPrimaryActionButton} from "../../../components/ThemedPrimaryActionButton";
 
 export default function RegisterPage() {
     const navigator = useNavigation();
@@ -54,11 +55,9 @@ export default function RegisterPage() {
                         <ThemedBirthDateInput title={"Date of Birth"} required={true}/>
                     </View>
                     <View className={"absolute bottom-0 w-full mb-20"}>
-                        <TouchableOpacity>
-                            <View className={"w-full bg-[#7BD4F7] p-2 rounded-xl"}>
-                                <Text className={"font-insS text-lg text-[#202020] text-center"}>Sign up</Text>
-                            </View>
-                        </TouchableOpacity>
+                        <ThemedPrimaryActionButton.Container>
+                            <ThemedPrimaryActionButton.Text>Sign up</ThemedPrimaryActionButton.Text>
+                        </ThemedPrimaryActionButton.Container>
                     </View>
                 </View>
             </View>

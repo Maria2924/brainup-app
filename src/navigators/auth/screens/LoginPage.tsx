@@ -1,7 +1,9 @@
-import {Image, KeyboardAvoidingView, Platform, Text, TextInput, TouchableOpacity, View} from "react-native";
+import {KeyboardAvoidingView, Platform, Text, View} from "react-native";
 import * as React from "react";
 import ThemedTextInput from "../../../components/ThemedTextInput";
 import {useNavigation} from "@react-navigation/native";
+import {ThemedPrimaryActionButton} from "../../../components/ThemedPrimaryActionButton";
+import Logo from "../../../components/Logo";
 
 export default function LoginPage() {
     const navigator = useNavigation();
@@ -13,7 +15,7 @@ export default function LoginPage() {
         >
             <View className="h-[60vh] flex flex-col justify-between px-6 py-[4rem]">
                 <View className={"flex flex-row gap-2 items-center"}>
-                    <Image source={require("../../../../assets/images/brainup.png")} className={"w-[48] h-[48]"}/>
+                    <Logo/>
                     <Text className={"text-[#7BD4F7] font-insB text-xl"}>BrainUp</Text>
                 </View>
                 <View className={""}>
@@ -32,15 +34,9 @@ export default function LoginPage() {
                 <View className={"flex flex-col gap-4 pt-4"}>
                     <ThemedTextInput title={"Email Address"} placeholder={"example@mail.com"} type={"text"} required={false}/>
                     <ThemedTextInput title={"Password"} placeholder={"********"} type={"password"} required={false}/>
-                    <TouchableOpacity
-                        onPress={() => navigator.navigate('AuthNavigator', {
-                            screen: "Register"
-                        })}
-                    >
-                        <View className={"w-full bg-[#7BD4F7] p-2 rounded-xl"}>
-                            <Text className={"font-insS text-lg text-[#202020] text-center"}>Continue</Text>
-                        </View>
-                    </TouchableOpacity>
+                    <ThemedPrimaryActionButton.Container onClick={() => navigator.navigate('AuthNavigator', { screen: "Register"})}>
+                        <ThemedPrimaryActionButton.Text>Continue</ThemedPrimaryActionButton.Text>
+                    </ThemedPrimaryActionButton.Container>
                 </View>
             </View>
         </KeyboardAvoidingView>
