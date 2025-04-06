@@ -1,7 +1,11 @@
 import {Image, KeyboardAvoidingView, Platform, Text, TextInput, TouchableOpacity, View} from "react-native";
 import * as React from "react";
+import ThemedTextInput from "../../../components/ThemedTextInput";
+import {useNavigation} from "@react-navigation/native";
 
 export default function LoginPage() {
+    const navigator = useNavigation();
+
     return (
         <KeyboardAvoidingView
             behavior={Platform.OS === 'ios' ? 'position' : undefined}
@@ -26,22 +30,13 @@ export default function LoginPage() {
             <View className={"bg-white rounded-t-3xl border-2 border-[#7BD4F7] py-4 px-6 h-full pb-safe-offset-8"}>
                 <Text className={"text-[#1F1F1F] font-insB text-2xl"}>Sign in</Text>
                 <View className={"flex flex-col gap-4 pt-4"}>
-                    <View className={"flex flex-col gap-2"}>
-                        <Text className={"text-black font-ins text-sm"}>Email Address</Text>
-                        <TextInput
-                            className={"bg-[#D9D9D9] px-4 py-3  border border-black rounded-lg text-black font-insB text-lg placeholder:text-[#767676]"}
-                            placeholder={"example@mail.com"}
-                        />
-                    </View>
-                    <View className={"flex flex-col gap-2"}>
-                        <Text className={"text-black font-ins text-sm"}>Password</Text>
-                        <TextInput
-                            secureTextEntry={true}
-                            className={"bg-[#D9D9D9] px-4 py-3 border border-black rounded-lg text-black font-insB text-lg placeholder:text-[#767676]"}
-                            placeholder={"********"}
-                        />
-                    </View>
-                    <TouchableOpacity>
+                    <ThemedTextInput title={"Email Address"} placeholder={"example@mail.com"} type={"text"} required={false}/>
+                    <ThemedTextInput title={"Password"} placeholder={"********"} type={"password"} required={false}/>
+                    <TouchableOpacity
+                        onPress={() => navigator.navigate('AuthNavigator', {
+                            screen: "Register"
+                        })}
+                    >
                         <View className={"w-full bg-[#7BD4F7] p-2 rounded-xl"}>
                             <Text className={"font-insS text-lg text-[#202020] text-center"}>Continue</Text>
                         </View>
