@@ -3,7 +3,6 @@ import {RootStackParamList} from "../../types";
 import {Text} from "react-native";
 import * as React from "react";
 import {CoursesLayouts} from "../layouts/CoursesLayouts";
-import SubjectPressable from "../../../components/subjects/SubjectPressable";
 import {Subject} from "../../../components/subjects/Subject";
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Assessments', 'CourseNavigator'>;
@@ -11,7 +10,7 @@ export default function AssessmentsPage(props: Props) {
     return (
         <CoursesLayouts.PartViewAll
             subject={props.route.params.subject.name}
-            part={"Activities"}
+            part={"Assessments"}
             navigation={props.navigation}
         >
             {props.route.params.subject.assessments.map((assessment) => {
