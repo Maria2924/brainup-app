@@ -1,5 +1,4 @@
-import {KeyboardAvoidingView, Platform, Text, TouchableHighlight, TouchableOpacity, View} from "react-native";
-import Logo from "../../../components/Logo";
+import {KeyboardAvoidingView, Platform, Text, TouchableOpacity, View} from "react-native";
 import * as React from "react";
 import {ArrowRight, Search, User} from "lucide-react-native";
 import {useNavigation} from "@react-navigation/native";
@@ -36,7 +35,26 @@ export default function HomePage() {
                         </TouchableOpacity>
                     </View>
                     <View className={"flex flex-row justify-between gap-1 flex-wrap mt-6"}>
-                        <TouchableOpacity className={"flex flex-col justify-between p-4 rounded-tr-lg rounded-bl-lg border border-black w-[48%] bg-[#5C71C6]"}>
+                        <TouchableOpacity
+                            onPress={() => navigation.navigate('CourseNavigator', {
+                                screen: "Course",
+                                params: {
+                                    course: {
+                                        id: "it",
+                                        name: "Information Technology",
+                                        description: "Information Technology is a subject that is a subject " +
+                                            "of another subject of information that  is all about" +
+                                            "information and nothing more than technological " +
+                                            "information.",
+                                        subjects: [
+                                            {id: "java", name: "Java"},
+                                            {id: "python", name: "Python"},
+                                        ]
+                                    }
+                                }
+                            })}
+                            className={"flex flex-col justify-between p-4 rounded-tr-lg rounded-bl-lg border border-black w-[48%] bg-[#5C71C6]"}
+                        >
                             <View className={"flex flex-row justify-end"}>
                                 <ArrowRight size={32} color={"#303030"}/>
                             </View>
