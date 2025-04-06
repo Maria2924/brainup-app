@@ -54,6 +54,10 @@ export default function CoursePage(props: Props) {
                                                 activities: [
                                                     {id: "calc", name: "Calculator App"},
                                                     {id: "console-log", name: "Console Logging"}
+                                                ],
+                                                modules: [
+                                                    {id: "java-basics", name: "Syntax of Java"},
+                                                    {id: "java-advanced", name: "Setting up Java"},
                                                 ]
                                             }
                                         }

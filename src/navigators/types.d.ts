@@ -13,7 +13,8 @@ export type RootStackParamList = {
             nmae: string,
             description: string,
             assessments: {id: string, name: string}[],
-            activities: {id: string, name: string}[]
+            activities: {id: string, name: string}[],
+            modules: {id: string, name: string}[]
         }
     }
 };
