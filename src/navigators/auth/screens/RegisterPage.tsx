@@ -13,13 +13,12 @@ export default function RegisterPage() {
         <KeyboardAvoidingView
             behavior={Platform.OS === 'ios' ? 'position' : undefined}
             className={"flex-1 flex flex-col gap-2 justify-between"}
+            keyboardVerticalOffset={-200}
         >
             <View className="flex flex-col justify-between px-6 py-20">
                 <View className={"flex flex-row gap-2 items-center"}>
                     <TouchableOpacity
-                        onPress={() => navigator.navigate('AuthNavigator', {
-                            screen: "Login"
-                        })}
+                        onPress={() => navigator.pop()}
                     >
                         <ArrowLeft className={"text-black"} size={32} color={"black"}/>
                     </TouchableOpacity>
@@ -55,7 +54,7 @@ export default function RegisterPage() {
                         <ThemedBirthDateInput title={"Date of Birth"} required={true}/>
                     </View>
                     <View className={"absolute bottom-0 w-full mb-20"}>
-                        <ThemedPrimaryActionButton.Container>
+                        <ThemedPrimaryActionButton.Container onClick={() => navigator.navigate('HomeNavigator')}>
                             <ThemedPrimaryActionButton.Text>Sign up</ThemedPrimaryActionButton.Text>
                         </ThemedPrimaryActionButton.Container>
                     </View>
