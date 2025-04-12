@@ -4,7 +4,7 @@ import {ArrowRight, Search, User} from "lucide-react-native";
 import {useNavigation} from "@react-navigation/native";
 
 export default function HomePage() {
-    const navigation = useNavigation();
+    const navigation = useNavigation<any>();
     return (
         <KeyboardAvoidingView
             behavior={Platform.OS === 'ios' ? 'position' : undefined}

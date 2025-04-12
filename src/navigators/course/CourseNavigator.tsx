@@ -5,6 +5,7 @@ import SubjectPage from "./screens/SubjectPage";
 import AssessmentsPage from "./screens/AssessmentsPage";
 import ActivitiesPage from "./screens/ActivitiesPage";
 import ModulesPage from "./screens/ModulesPage";
+import {Course, Subject} from "../../types/course";
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 export function CourseNavigator() {
@@ -17,4 +18,22 @@ export function CourseNavigator() {
             <Stack.Screen name={"Modules"} component={ModulesPage}></Stack.Screen>
         </Stack.Navigator>
     )
+}
+
+export type CourseNavigatorParamList = {
+    Course: {
+        course: Course
+    }
+    Subject: {
+        subject: Subject
+    },
+    Assessments: {
+        subject: Subject
+    },
+    Activities: {
+        subject: Subject
+    },
+    Modules: {
+        subject: Subject
+    },
 }

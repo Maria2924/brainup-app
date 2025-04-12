@@ -4,7 +4,7 @@ import {ArrowLeft} from "lucide-react-native";
 import {useNavigation} from "@react-navigation/native";
 
 export default function CoursesMajorPartLayout({ title, description, children }: { title: string, description?: string, children: React.ReactNode}) {
-    const navigation = useNavigation();
+    const navigation = useNavigation<any>();
     return (
         <View
             className={"flex-1 flex flex-col gap-2 justify-between bg-[#D9D9D9]"}

@@ -4,6 +4,11 @@ import RegisterPage from "./screens/RegisterPage";
 import {RootStackParamList} from "../types";
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
+export type AuthNavigatorParamList = {
+    Login: {},
+    Register: {},
+}
+
 export function AuthNavigator() {
     return (
         <Stack.Navigator initialRouteName={"Login"} screenOptions={{ headerShown: false }}>

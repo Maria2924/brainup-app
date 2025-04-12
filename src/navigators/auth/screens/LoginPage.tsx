@@ -6,7 +6,7 @@ import {ThemedPrimaryActionButton} from "../../../components/ThemedPrimaryAction
 import Logo from "../../../components/Logo";
 
 export default function LoginPage() {
-    const navigator = useNavigation();
+    const navigator = useNavigation<any>();
 
     return (
         <KeyboardAvoidingView

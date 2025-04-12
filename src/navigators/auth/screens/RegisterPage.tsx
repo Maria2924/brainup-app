@@ -7,7 +7,7 @@ import { useNavigation } from "@react-navigation/native";
 import {ThemedPrimaryActionButton} from "../../../components/ThemedPrimaryActionButton";
 
 export default function RegisterPage() {
-    const navigator = useNavigation();
+    const navigator = useNavigation<any>();
 
     return (
         <KeyboardAvoidingView

@@ -3,6 +3,7 @@ import {RootStackParamList} from "../../types";
 import * as React from "react";
 import {Subject} from "../../../components/subjects/Subject";
 import {CoursesLayouts} from "../layouts/CoursesLayouts";
+import {Activity, Assessment, Module} from "../../../types/course";
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Subject', 'CourseNavigator'>;
 export default function SubjectPage(props: Props) {
@@ -26,7 +27,7 @@ export default function SubjectPage(props: Props) {
                     })
                 }}
             >
-                {props.route.params.subject.assessments.slice(0,2).map((assessment) => (
+                {props.route.params.subject.assessments.slice(0,2).map((assessment: Assessment) => (
                     <Subject.Pressable text={assessment.name} key={assessment.id}/>
                 ))}
             </Subject.Section>
@@ -46,7 +47,7 @@ export default function SubjectPage(props: Props) {
                     })
                 }}
             >
-                {props.route.params.subject.activities.map((activity) => (
+                {props.route.params.subject.activities.map((activity: Activity) => (
                     <Subject.Pressable text={activity.name} key={activity.id}/>
                 ))}
             </Subject.Section>
@@ -66,7 +67,7 @@ export default function SubjectPage(props: Props) {
                     })
                 }}
             >
-                {props.route.params.subject.modules.map((module) => (
+                {props.route.params.subject.modules.map((module: Module) => (
                     <Subject.Pressable text={module.name} key={module.id}/>
                 ))}
             </Subject.Section>

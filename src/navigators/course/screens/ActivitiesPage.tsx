@@ -4,6 +4,7 @@ import {Text} from "react-native";
 import * as React from "react";
 import {CoursesLayouts} from "../layouts/CoursesLayouts";
 import {Subject} from "../../../components/subjects/Subject";
+import {Activity} from "../../../types/course";
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Activities', 'CourseNavigator'>;
 export default function ActivitiesPage(props: Props) {
@@ -13,7 +14,7 @@ export default function ActivitiesPage(props: Props) {
             part={"Activities"}
             navigation={props.navigation}
         >
-            {props.route.params.subject.activities.map((activity) => {
+            {props.route.params.subject.activities.map((activity: Activity) => {
                 return (
                     <Subject.Pressable text={activity.name} key={activity.id}>
                         {activity.status === "submitted" ? (
