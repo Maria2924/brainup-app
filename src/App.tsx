@@ -10,12 +10,12 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import {useFonts} from "expo-font";
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import {useEffect, useState} from "react";
+import {useEffect} from "react";
 import {AuthNavigator} from "./navigators/auth/AuthNavigator";
 import {RootStackParamList} from "./navigators/types";
 import HomeNavigator from "./navigators/home/HomeNavigator";
 import {CourseNavigator} from "./navigators/course/CourseNavigator";
-import {Text, View} from "react-native";
+import {StatusBar, Text, View} from "react-native";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -28,21 +28,15 @@ export function App() {
         InstrumentSans_400Regular,
     })
 
-    const [isNavigationReady, setIsNavigationReady] = useState<boolean>(false);
-
     useEffect(() => {
         if (error) {
             SplashScreen.hideAsync();
             console.error("Failed to load fonts:", error)
             return;
         }
-
         if (!isFontsLoaded) {
-            console.debug("Fonts not loaded yet");
             return;
         }
-
-        console.debug('Unhiding splashscreen.')
         SplashScreen.hideAsync();
     }, [isFontsLoaded, error]);
 
@@ -69,8 +63,8 @@ export function App() {
                     'brainup://',
                 ],
             }}
-            onReady={() => setIsNavigationReady(true)}
         >
+            <StatusBar barStyle={"dark-content"} animated={true}/>
             <Stack.Navigator initialRouteName={"HomeNavigator"}>
                 <Stack.Screen
                     name={"AuthNavigator"}
