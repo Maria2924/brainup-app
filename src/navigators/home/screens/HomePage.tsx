@@ -28,12 +28,7 @@ export default function HomePage() {
                     </TouchableOpacity>
                 </View>
                 <View className={"mt-16"}>
-                    <View className={"flex flex-row justify-between items-center"}>
-                        <Text className={"font-insB text-[#1F1F1F] text-xl"}>Course Overview</Text>
-                        <TouchableOpacity>
-                            <Text className={"font-insM leading-none text-[#7A7A7A] text-xs"}>View All</Text>
-                        </TouchableOpacity>
-                    </View>
+                    <Text className={"font-insB text-[#1F1F1F] text-xl"}>Course Overview</Text>
                     <View className={"flex flex-row justify-between gap-1 flex-wrap mt-6"}>
                         <TouchableOpacity
                             onPress={() => navigation.navigate('CourseNavigator', {
