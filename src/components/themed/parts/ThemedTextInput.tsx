@@ -40,7 +40,7 @@ export default function ThemedTextInput(props: ThemedTextInputProps) {
             </Text>
             <TextInput
                 secureTextEntry={props.type === "password"}
-                className={"bg-[#D9D9D9] px-4 py-3 border border-black rounded-lg text-black font-insB text-lg"}
+                className={"bg-[#D9D9D9] px-4 h-16 border border-black rounded-lg text-black font-insB text-lg"}
                 placeholder={props.placeholder}
                 placeholderTextColor={"#767676"}
                 allowFontScaling={false}
