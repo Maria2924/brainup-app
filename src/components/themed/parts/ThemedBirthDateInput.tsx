@@ -43,37 +43,42 @@ export default function ThemedBirthDateInput(props: ThemedTextInputProps) {
             </Text>
             <View className={"flex flex-row gap-2 items-center"}>
                 <TextInput
-                    className={"bg-[#D9D9D9] px-4 py-3 border border-black rounded-lg text-black font-insB text-lg placeholder:text-[#767676]"}
+                    className={"bg-[#D9D9D9] w-24 text-center px-4 py-3 border border-black rounded-lg text-black font-insB text-lg placeholder:text-[#767676]"}
                     placeholder={"Month"}
                     keyboardType={"decimal-pad"}
                     returnKeyType={"next"}
                     value={value.month === 0 ? "" : value.month.toString()}
                     onChangeText={(text) => {
-                        if (!Number.isNaN(text)) {
+                        if (!Number.isNaN(text) && text.length > 0 && text !== "") {
                             const month = Number.parseInt(text);
                             if (month > 12 || month < 1) {
+                                onChangeText({ month: 12 })
                                 return;
                             }
 
                             onChangeText({ month })
+                        } else if (text === ""|| text.length <= 0) {
+                            onChangeText({month: 0})
                         }
                     }}
                     maxLength={2}
                 />
                 <TextInput
-                    className={"bg-[#D9D9D9] px-4 py-3 border border-black rounded-lg text-black font-insB text-lg placeholder:text-[#767676]"}
+                    className={"bg-[#D9D9D9] w-20 text-center  px-4 py-3 border border-black rounded-lg text-black font-insB text-lg placeholder:text-[#767676]"}
                     placeholder={"Day"}
                     keyboardType={"numeric"}
                     returnKeyType={"next"}
                     value={value.day === 0 ? "" : value.day.toString()}
                     onChangeText={(text) => {
-                        if (!Number.isNaN(text)) {
+                        if (!Number.isNaN(text) && text.length > 0 && text !== "") {
                             const day = Number.parseInt(text);
                             if (day > 31 || day < 1) {
                                 return;
                             }
 
                             onChangeText({ day })
+                        }  else if (text === ""|| text.length <= 0) {
+                            onChangeText({day: 0})
                         }
                     }}
                     maxLength={2}
@@ -85,7 +90,7 @@ export default function ThemedBirthDateInput(props: ThemedTextInputProps) {
                     returnKeyType={"send"}
                     value={value.year === 0 ? "" : value.year.toString()}
                     onChangeText={(text) => {
-                        if (!Number.isNaN(text)) {
+                        if (!Number.isNaN(text) && text.length > 0 && text !== "") {
                             const year = Number.parseInt(text.replace(/[^0-9]/g, ''));
                             if (year > 1000 && year < 1900) {
                                 return;
@@ -97,6 +102,8 @@ export default function ThemedBirthDateInput(props: ThemedTextInputProps) {
                             }
 
                             onChangeText({ year })
+                        } else if (text === ""|| text.length <= 0) {
+                            onChangeText({year: 0})
                         }
                     }}
                     maxLength={4}
