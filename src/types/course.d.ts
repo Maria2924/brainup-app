@@ -1,4 +1,4 @@
-import {Entity} from "./commons";
+import {Entity, WithId} from "./commons";
 
 export type Course = Entity & {
     description: string,
@@ -13,6 +13,7 @@ export type Subject = Entity & {
 }
 
 export type Assessment = Entity & {
+    questions: Question[],
     score: { received: number, max: number } | null
 }
 
@@ -21,3 +22,18 @@ export type Activity = Entity & {
 }
 
 export type Module = Entity;
+export type Question = WithId & {
+    text: string,
+    type: "code" | "single_choice",
+    choices?: (WithId & { text: string })[],
+    language?: CodingLanguage
+}
+
+export type Compilers = ("java2400" | "kotlinc2100" | "python310" | "g142");
+export type CodingLanguages = ("java" | "kotlin" | "python" | "c" | "cpp");
+export type CodingLanguagesName = ("Java" | "Kotlin" | "Python" | "C" | "C++");
+export type CodingLanguage = {
+    code: CodingLanguages,
+    text: CodingLanguagesName,
+    compiler: Compilers;
+}

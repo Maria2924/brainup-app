@@ -5,12 +5,13 @@ export type ThemedPrimaryActionButtonProps = {
     children: React.ReactNode,
     className?: string,
     onClick?: () => void,
+    disabled?: boolean
 }
 
-function Container({ children, className, onClick }: ThemedPrimaryActionButtonProps) {
+function Container({ children, className, onClick, disabled = false }: ThemedPrimaryActionButtonProps) {
     return (
-        <TouchableOpacity onPress={onClick ?? (() => {})}>
-            <View className={`w-full bg-[#7BD4F7] p-2 rounded-xl ${className ?? ""}`}>
+        <TouchableOpacity onPress={onClick ?? (() => {})} disabled={disabled}>
+            <View className={`w-full bg-[#7BD4F7] p-2 rounded-xl ${className ?? ""} ${disabled && "opacity-50"}`}>
                 {children}
             </View>
         </TouchableOpacity>

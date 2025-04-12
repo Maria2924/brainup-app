@@ -39,7 +39,14 @@ export default function SubjectPage(props: Props) {
                                     screen: "TakeAssessmentWarning",
                                     params: {
                                         title: assessment.name,
-                                        onContinue: () => {}
+                                        onContinue: () => {
+                                            props.navigation.navigate("CourseNavigator", {
+                                                screen: "TakeAssessment",
+                                                params: {
+                                                    assessment
+                                                }
+                                            })
+                                        }
                                     }
                                 })
                             } else {

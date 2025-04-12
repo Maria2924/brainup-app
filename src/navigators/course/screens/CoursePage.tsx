@@ -2,9 +2,10 @@ import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import {RootStackParamList} from "../../types";
 import * as React from "react";
 import {Subject} from "../../../components/subjects/Subject";
-import type {Subject as SubjectType} from "../../../types/course";
+import type {Assessment, Subject as SubjectType} from "../../../types/course";
 import {CoursesLayouts} from "../layouts/CoursesLayouts";
 import {Themed} from "../../../components/themed/Themed";
+import {useLanguage} from "../../../utils/useLanguage";
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Course', 'CourseNavigator'>;
 export default function CoursePage(props: Props) {
@@ -26,7 +27,54 @@ export default function CoursePage(props: Props) {
                                         "known for its simplicity, efficiency, and security, used to create  " +
                                         "various applications, from Android apps to enterprise software",
                                     assessments: [
-                                        {id: "midterms", name: "Midterms Exam", score: null},
+                                        {
+                                            id: "midterms",
+                                            name: "Midterms Exam",
+                                            score: null,
+                                            questions: [
+                                                {
+                                                    id: "question-1",
+                                                    text: "It is a software that can be used to write Java applications.",
+                                                    type: "single_choice",
+                                                    choices: [
+                                                        { id: "webstorm", text: "Webstorm" },
+                                                        { id: "goland", text: "Goland" },
+                                                        { id: "intellij", text: "IntelliJ IDEA" },
+                                                        { id: "rustrover", text: "RustRover" },
+                                                    ]
+                                                },
+                                                {
+                                                    id: "question-2",
+                                                    text: "Write a code that outputs the following: Hello World",
+                                                    type: "code",
+                                                    language: useLanguage("java")
+                                                },
+                                                {
+                                                    id: "question-3",
+                                                    text: "Write a code in C that outputs the following: Hello World",
+                                                    type: "code",
+                                                    language: useLanguage("c")
+                                                },
+                                                {
+                                                    id: "question-4",
+                                                    text: "Write a code in Python that outputs the following: Hello World",
+                                                    type: "code",
+                                                    language: useLanguage("python")
+                                                },
+                                                {
+                                                    id: "question-5",
+                                                    text: "Write a code in Kotlin that outputs the following: Hello World",
+                                                    type: "code",
+                                                    language: useLanguage("kotlin")
+                                                },
+                                                {
+                                                    id: "question-6",
+                                                    text: "Write a code in C++ that outputs the following: Hello World",
+                                                    type: "code",
+                                                    language: useLanguage("cpp")
+                                                },
+                                            ]
+                                        } as Assessment,
                                         {id: "pretest", name: "Pre-test", score: { received: 10, max: 50 }},
                                     ],
                                     activities: [
