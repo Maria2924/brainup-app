@@ -21,7 +21,10 @@ export type Activity = Entity & {
     status: "submitted" | "unanswered"
 }
 
-export type Module = Entity;
+export type Module = Entity & {
+    text: string,
+    attachments: {name: string, source: string}[]
+};
 export type Question = WithId & {
     text: string,
     type: "code" | "single_choice",

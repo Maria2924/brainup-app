@@ -82,8 +82,28 @@ export default function CoursePage(props: Props) {
                                         {id: "console-log", name: "Console Logging", status: "submitted"}
                                     ],
                                     modules: [
-                                        {id: "java-basics", name: "Syntax of Java"},
-                                        {id: "java-advanced", name: "Setting up Java"},
+                                        {
+                                            id: "java-basics",
+                                            name: "Syntax of Java",
+                                            attachments: [
+                                                {
+                                                    name: "syntax-of-java.pdf",
+                                                    source: "https://staff.um.edu.mt/__data/assets/pdf_file/0010/57169/jn.pdf"
+                                                }
+                                            ],
+                                            text: "In this module, you will learn about the syntax of Java and how it applies to Java applications."
+                                        },
+                                        {
+                                            id: "java-advanced",
+                                            name: "Setting up Java",
+                                            attachments: [
+                                                {
+                                                    name: "java-installer.exe",
+                                                    source: "https://www.java.com/en/download/manual.jsp"
+                                                }
+                                            ],
+                                            text: "To set-up Java in your system, simply download the installer attached."
+                                        },
                                     ]
                                 }
                             }

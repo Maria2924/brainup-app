@@ -19,7 +19,7 @@ export default function CoursesMajorPartLayout({ title, description, children }:
                     <Text className={"font-insB text-[#1F1F1F] text-xl"}>{title}</Text>
                 </View>
                 {description && (
-                    <View className={"pt-12 h-fit mt-4"}>
+                    <View className={"pt-2 h-fit mt-4"}>
                         <Text className={"font-insB text-[#1F1F1F] text-lg"}>Description</Text>
                         <Text className={"font-ins text-[#101010]"}>
                             {description}

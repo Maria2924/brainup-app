@@ -96,7 +96,16 @@ export default function SubjectPage(props: Props) {
                 }}
             >
                 {props.route.params.subject.modules.map((module: Module) => (
-                    <Themed.SemiRoundedPressable text={module.name} key={module.id}/>
+                    <Themed.SemiRoundedPressable
+                        text={module.name}
+                        key={module.id}
+                        onPress={() => props.navigation.navigate("CourseNavigator", {
+                            screen: "ViewModule",
+                            params: {
+                                module
+                            }
+                        })}
+                    />
                 ))}
             </Subject.Section>
         </CoursesLayouts.Major>

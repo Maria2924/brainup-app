@@ -14,7 +14,16 @@ export default function ModulesPage(props: Props) {
             navigation={props.navigation
         }>
             {props.route.params.subject.modules.map((module: Module) => (
-                <Themed.SemiRoundedPressable text={module.name} key={module.id}></Themed.SemiRoundedPressable>
+                <Themed.SemiRoundedPressable
+                    text={module.name}
+                    key={module.id}
+                    onPress={() => props.navigation.navigate("CourseNavigator", {
+                        screen: "ViewModule",
+                        params: {
+                            module
+                        }
+                    })}
+                ></Themed.SemiRoundedPressable>
             ))}
         </CoursesLayouts.PartViewAll>
     )
