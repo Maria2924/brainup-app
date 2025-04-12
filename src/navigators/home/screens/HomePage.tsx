@@ -2,6 +2,7 @@ import {KeyboardAvoidingView, Platform, Text, TouchableOpacity, View} from "reac
 import * as React from "react";
 import {ArrowRight, Search, User} from "lucide-react-native";
 import {useNavigation} from "@react-navigation/native";
+import {Courses} from "../../../components/courses/course";
 
 export default function HomePage() {
     const navigation = useNavigation<any>();
@@ -30,7 +31,8 @@ export default function HomePage() {
                 <View className={"mt-16"}>
                     <Text className={"font-insB text-[#1F1F1F] text-xl"}>Course Overview</Text>
                     <View className={"flex flex-row justify-between gap-1 flex-wrap mt-6"}>
-                        <TouchableOpacity
+                        <Courses.Pressable
+                            text={"Information Technology"}
                             onPress={() => navigation.navigate('CourseNavigator', {
                                 screen: "Course",
                                 params: {
@@ -48,19 +50,10 @@ export default function HomePage() {
                                     }
                                 }
                             })}
-                            className={"flex flex-col justify-between p-4 rounded-tr-lg rounded-bl-lg border border-black w-[48%] bg-[#5C71C6]"}
-                        >
-                            <View className={"flex flex-row justify-end"}>
-                                <ArrowRight size={32} color={"#303030"}/>
-                            </View>
-                            <Text className={"text-xl leading-none text-[#303030] font-insM mt-12"}>Information Technology</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity className={"flex flex-col justify-between p-4 rounded-tr-lg rounded-bl-lg border border-black w-[48%] bg-[#69C65C]"}>
-                            <View className={"flex flex-row justify-end"}>
-                                <ArrowRight size={32} color={"#303030"}/>
-                            </View>
-                            <Text className={"text-xl leading-none text-[#303030] font-insM mt-12"}>Programming</Text>
-                        </TouchableOpacity>
+                        />
+                        <Courses.Pressable
+                            text={"Programming"}
+                        />
                     </View>
                 </View>
             </View>
