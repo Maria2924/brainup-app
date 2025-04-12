@@ -1,6 +1,6 @@
-import {Image, KeyboardAvoidingView, Platform, Text, TouchableOpacity, View} from "react-native";
+import {KeyboardAvoidingView, Platform, Text, TouchableOpacity, View} from "react-native";
 import * as React from "react";
-import {ArrowLeft, ArrowRight} from "lucide-react-native";
+import {ArrowLeft} from "lucide-react-native";
 import ThemedTextInput from "../../../components/ThemedTextInput";
 import ThemedBirthDateInput from "../../../components/ThemedBirthDateInput";
 import { useNavigation } from "@react-navigation/native";

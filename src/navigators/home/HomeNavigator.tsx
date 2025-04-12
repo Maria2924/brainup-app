@@ -1,6 +1,6 @@
 import HomePage from "./screens/HomePage";
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
-import {BellIcon, BotIcon, HomeIcon, Share2, Share2Icon, ShareIcon} from "lucide-react-native";
+import {BellIcon, BotIcon, HomeIcon, Share2Icon} from "lucide-react-native";
 
 const Tab = createBottomTabNavigator();
 export type HomeNavigatorParamList = {
