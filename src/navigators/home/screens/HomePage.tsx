@@ -1,8 +1,14 @@
 import {KeyboardAvoidingView, Platform, Text, TouchableOpacity, View} from "react-native";
 import * as React from "react";
-import {ArrowRight, Search, User} from "lucide-react-native";
+import {Search, User} from "lucide-react-native";
 import {useNavigation} from "@react-navigation/native";
 import {Courses} from "../../../components/courses/course";
+import {
+    JavaSubject,
+    NetworkingFundamentalsSubject,
+    OperatingSystemsSubject,
+    PythonSubject
+} from "../../../mocks/subjects";
 
 export default function HomePage() {
     const navigation = useNavigation<any>();
@@ -39,13 +45,10 @@ export default function HomePage() {
                                     course: {
                                         id: "it",
                                         name: "Information Technology",
-                                        description: "Information Technology is a subject that is a subject " +
-                                            "of another subject of information that  is all about" +
-                                            "information and nothing more than technological " +
-                                            "information.",
+                                        description: "Explore the essentials of computer systems, networks, hardware, software, and cybersecurity, focusing on the practical application, management, and support of technology within organizations.",
                                         subjects: [
-                                            {id: "java", name: "Java"},
-                                            {id: "python", name: "Python"},
+                                            NetworkingFundamentalsSubject,
+                                            OperatingSystemsSubject,
                                         ]
                                     }
                                 }
@@ -53,6 +56,20 @@ export default function HomePage() {
                         />
                         <Courses.Pressable
                             text={"Programming"}
+                            onPress={() => navigation.navigate('CourseNavigator', {
+                                screen: "Course",
+                                params: {
+                                    course: {
+                                        id: "programming",
+                                        name: "Programming",
+                                        description: "Learn the fundamentals of coding, algorithms, and software development to build applications and solve computational problems using various programming languages.",
+                                        subjects: [
+                                            JavaSubject,
+                                            PythonSubject,
+                                        ]
+                                    }
+                                }
+                            })}
                         />
                     </View>
                 </View>
