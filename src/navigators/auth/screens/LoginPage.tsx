@@ -1,9 +1,8 @@
 import {KeyboardAvoidingView, Platform, Text, View} from "react-native";
 import * as React from "react";
-import ThemedTextInput from "../../../components/ThemedTextInput";
 import {useNavigation} from "@react-navigation/native";
-import {ThemedPrimaryActionButton} from "../../../components/ThemedPrimaryActionButton";
 import Logo from "../../../components/Logo";
+import {Themed} from "../../../components/themed/Themed";
 
 export default function LoginPage() {
     const navigator = useNavigation<any>();
@@ -32,11 +31,11 @@ export default function LoginPage() {
             <View className={"bg-white rounded-t-3xl border-2 border-[#7BD4F7] py-4 px-6 h-full pb-safe-offset-8"}>
                 <Text className={"text-[#1F1F1F] font-insB text-2xl"}>Sign in</Text>
                 <View className={"flex flex-col gap-4 pt-4"}>
-                    <ThemedTextInput title={"Email Address"} placeholder={"example@mail.com"} type={"text"} required={false}/>
-                    <ThemedTextInput title={"Password"} placeholder={"********"} type={"password"} required={false}/>
-                    <ThemedPrimaryActionButton.Container onClick={() => navigator.navigate('AuthNavigator', { screen: "Register"})}>
-                        <ThemedPrimaryActionButton.Text>Continue</ThemedPrimaryActionButton.Text>
-                    </ThemedPrimaryActionButton.Container>
+                    <Themed.TextInput title={"Email Address"} placeholder={"example@mail.com"} type={"text"} required={false}/>
+                    <Themed.TextInput title={"Password"} placeholder={"********"} type={"password"} required={false}/>
+                    <Themed.PrimaryActionButton.Container onClick={() => navigator.navigate('AuthNavigator', { screen: "Register"})}>
+                        <Themed.PrimaryActionButton.Text>Continue</Themed.PrimaryActionButton.Text>
+                    </Themed.PrimaryActionButton.Container>
                 </View>
             </View>
         </KeyboardAvoidingView>

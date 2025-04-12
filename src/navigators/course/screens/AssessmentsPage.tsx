@@ -3,8 +3,8 @@ import {RootStackParamList} from "../../types";
 import {Text} from "react-native";
 import * as React from "react";
 import {CoursesLayouts} from "../layouts/CoursesLayouts";
-import {Subject} from "../../../components/subjects/Subject";
 import {Assessment} from "../../../types/course";
+import {Themed} from "../../../components/themed/Themed";
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Assessments', 'CourseNavigator'>;
 export default function AssessmentsPage(props: Props) {
@@ -16,7 +16,7 @@ export default function AssessmentsPage(props: Props) {
         >
             {props.route.params.subject.assessments.map((assessment: Assessment) => {
                 return (
-                    <Subject.Pressable text={assessment.name} key={assessment.id}>
+                    <Themed.SemiRoundedPressable text={assessment.name} key={assessment.id}>
                         {assessment.score ? (
                             <Text className={"text-xs leading-none text-[#303030] font-ins"}>
                                 You scored {assessment.score.received} over {assessment.score.max} in this assessment.
@@ -26,7 +26,7 @@ export default function AssessmentsPage(props: Props) {
                                 Unanswered
                             </Text>
                         )}
-                    </Subject.Pressable>
+                    </Themed.SemiRoundedPressable>
                 )
             })}
         </CoursesLayouts.PartViewAll>

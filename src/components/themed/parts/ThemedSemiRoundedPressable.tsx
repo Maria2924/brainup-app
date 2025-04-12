@@ -2,12 +2,13 @@ import {Text, TouchableOpacity, View} from "react-native";
 import { ArrowRight } from "lucide-react-native";
 import * as React from "react";
 
-export type SubjectPressableProps = {
+export type ThemedSemiRoundedPressableProps = {
     key?: string,
     text: string,
     children?: React.ReactNode,
     onPress?: () => void,
-    color?: string
+    color?: string,
+    hideRightArrow?: boolean,
 }
 
 const simpleStringHash = (str: string): number => {
@@ -30,7 +31,7 @@ const generateHSLColorFromText = (str: string): string => {
 };
 
 
-export default function SubjectPressable({ text, children, color, onPress }: SubjectPressableProps) {
+export default function ThemedSemiRoundedPressable({ text, children, color, onPress, hideRightArrow = false }: ThemedSemiRoundedPressableProps) {
     const colorFromText = generateHSLColorFromText(text);
     const finalBgColor = color ?? colorFromText;
     return (
@@ -43,7 +44,9 @@ export default function SubjectPressable({ text, children, color, onPress }: Sub
                 <Text className={"text-xl leading-none text-[#303030] font-insM"}>{text}</Text>
                 {children}
             </View>
-            <ArrowRight size={32} color={"#303030"}/>
+            {!hideRightArrow && (
+                <ArrowRight size={32} color={"#303030"}/>
+            )}
         </TouchableOpacity>
     )
 }

@@ -1,10 +1,8 @@
 import {KeyboardAvoidingView, Platform, Text, TouchableOpacity, View} from "react-native";
 import * as React from "react";
 import {ArrowLeft} from "lucide-react-native";
-import ThemedTextInput from "../../../components/ThemedTextInput";
-import ThemedBirthDateInput from "../../../components/ThemedBirthDateInput";
 import { useNavigation } from "@react-navigation/native";
-import {ThemedPrimaryActionButton} from "../../../components/ThemedPrimaryActionButton";
+import {Themed} from "../../../components/themed/Themed";
 
 export default function RegisterPage() {
     const navigator = useNavigation<any>();
@@ -30,33 +28,33 @@ export default function RegisterPage() {
                         know you first!
                     </Text>
                     <View className={"flex flex-col gap-4 pt-4"}>
-                        <ThemedTextInput
+                        <Themed.TextInput
                             title={"First Name"}
                             placeholder={"Juan"}
                             type={"text"}
                             required={true}
                             titleFontWeight={"semibold"}
                         />
-                        <ThemedTextInput
+                        <Themed.TextInput
                             title={"Middle Name"}
                             placeholder={"Dela (optional)"}
                             type={"text"}
                             required={false}
                             titleFontWeight={"semibold"}
                         />
-                        <ThemedTextInput
+                        <Themed.TextInput
                             title={"Last Name"}
                             placeholder={"Cruz"}
                             type={"text"}
                             required={true}
                             titleFontWeight={"semibold"}
                         />
-                        <ThemedBirthDateInput title={"Date of Birth"} required={true}/>
+                        <Themed.BirthDateInput title={"Date of Birth"} required={true}/>
                     </View>
                     <View className={"absolute bottom-0 w-full mb-20"}>
-                        <ThemedPrimaryActionButton.Container onClick={() => navigator.navigate('HomeNavigator')}>
-                            <ThemedPrimaryActionButton.Text>Sign up</ThemedPrimaryActionButton.Text>
-                        </ThemedPrimaryActionButton.Container>
+                        <Themed.PrimaryActionButton.Container onClick={() => navigator.navigate('HomeNavigator')}>
+                            <Themed.PrimaryActionButton.Text>Sign up</Themed.PrimaryActionButton.Text>
+                        </Themed.PrimaryActionButton.Container>
                     </View>
                 </View>
             </View>
