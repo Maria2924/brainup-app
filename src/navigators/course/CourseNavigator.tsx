@@ -5,11 +5,12 @@ import SubjectPage from "./screens/SubjectPage";
 import AssessmentsPage from "./screens/AssessmentsPage";
 import ActivitiesPage from "./screens/ActivitiesPage";
 import ModulesPage from "./screens/ModulesPage";
-import {Assessment, Course, Module, Subject} from "../../types/course";
+import {Activity, Assessment, Course, Module, Subject} from "../../types/course";
 import TakeAssessmentWarningPage from "./screens/TakeAssessmentWarningPage";
 import TakeAssessment from "./screens/TakeAssessment";
 import TakeAssessmentSubmissionPage from "./screens/TakeAssessmentSubmissionPage";
 import ViewModulePage from "./screens/ViewModulePage";
+import ActivitySubmissionPage from "./screens/ActivitySubmissionPage";
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 export function CourseNavigator() {
@@ -24,6 +25,7 @@ export function CourseNavigator() {
             <Stack.Screen name={"TakeAssessment"} component={TakeAssessment}></Stack.Screen>
             <Stack.Screen name={"TakeAssessmentSubmission"} component={TakeAssessmentSubmissionPage}></Stack.Screen>
             <Stack.Screen name={"ViewModule"} component={ViewModulePage}></Stack.Screen>
+            <Stack.Screen name={"ActivitySubmission"} component={ActivitySubmissionPage}></Stack.Screen>
         </Stack.Navigator>
     )
 }
@@ -57,5 +59,8 @@ export type CourseNavigatorParamList = {
     },
     ViewModule: {
         module: Module
+    },
+    ActivitySubmission: {
+        activity: Activity
     }
 }

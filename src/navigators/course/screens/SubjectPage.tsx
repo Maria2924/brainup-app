@@ -76,7 +76,16 @@ export default function SubjectPage(props: Props) {
                 }}
             >
                 {props.route.params.subject.activities.map((activity: Activity) => (
-                    <Themed.SemiRoundedPressable text={activity.name} key={activity.id}/>
+                    <Themed.SemiRoundedPressable
+                        text={activity.name}
+                        key={activity.id}
+                        onPress={() => props.navigation.navigate("CourseNavigator", {
+                            screen: "ActivitySubmission",
+                            params: {
+                                activity
+                            }
+                        })}
+                    />
                 ))}
             </Subject.Section>
             <Subject.Section

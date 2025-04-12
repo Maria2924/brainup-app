@@ -18,6 +18,7 @@ export type Assessment = Entity & {
 }
 
 export type Activity = Entity & {
+    text: string,
     status: "submitted" | "unanswered"
 }
 

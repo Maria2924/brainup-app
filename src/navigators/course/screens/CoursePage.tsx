@@ -78,8 +78,18 @@ export default function CoursePage(props: Props) {
                                         {id: "pretest", name: "Pre-test", score: { received: 10, max: 50 }},
                                     ],
                                     activities: [
-                                        {id: "calc", name: "Calculator App", status: "unanswered"},
-                                        {id: "console-log", name: "Console Logging", status: "submitted"}
+                                        {
+                                            id: "calc",
+                                            name: "Calculator App",
+                                            status: "unanswered",
+                                            text: "Your task is to create a Calculator App using only  Java. You may use NetBeans IDE, or other related  IDEs. It should be able to perform basic mathematical operations such as addition, subtraction, multiplication and division.",
+                                        },
+                                        {
+                                            id: "console-log",
+                                            name: "Console Logging",
+                                            status: "submitted",
+                                            text: "Your task is to create a simple Hello World application in Java."
+                                        }
                                     ],
                                     modules: [
                                         {

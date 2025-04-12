@@ -16,7 +16,16 @@ export default function ActivitiesPage(props: Props) {
         >
             {props.route.params.subject.activities.map((activity: Activity) => {
                 return (
-                    <Themed.SemiRoundedPressable text={activity.name} key={activity.id}>
+                    <Themed.SemiRoundedPressable
+                        text={activity.name}
+                        key={activity.id}
+                        onPress={() => props.navigation.navigate("CourseNavigator", {
+                            screen: "ActivitySubmission",
+                            params: {
+                                activity
+                            }
+                        })}
+                    >
                         {activity.status === "submitted" ? (
                             <Text className={"text-xs leading-none text-[#303030] font-ins"}>
                                 Submitted

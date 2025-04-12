@@ -3,7 +3,16 @@ import {ScrollView, Text, TouchableOpacity, View} from "react-native";
 import {ArrowLeft} from "lucide-react-native";
 import {useNavigation} from "@react-navigation/native";
 
-export default function CoursesMajorPartLayout({ title, description, children }: { title: string, description?: string, children: React.ReactNode}) {
+type Props = {
+    title: string,
+    description?: string,
+    children: React.ReactNode,
+    scrollViewClassName?: string,
+    scrollViewContainerClassName?: string,
+    footerClassName?: string,
+    footer?: React.ReactNode
+}
+export default function CoursesMajorPartLayout({title, description, children, scrollViewClassName, scrollViewContainerClassName, footerClassName, footer }: Props) {
     const navigation = useNavigation<any>();
     return (
         <View
@@ -19,7 +28,7 @@ export default function CoursesMajorPartLayout({ title, description, children }:
                     <Text className={"font-insB text-[#1F1F1F] text-xl"}>{title}</Text>
                 </View>
                 {description && (
-                    <View className={"pt-2 h-fit mt-4"}>
+                    <View className={"pt- h-fit mt-4"}>
                         <Text className={"font-insB text-[#1F1F1F] text-lg"}>Description</Text>
                         <Text className={"font-ins text-[#101010]"}>
                             {description}
@@ -28,12 +37,13 @@ export default function CoursesMajorPartLayout({ title, description, children }:
                 )}
             </View>
             <ScrollView
-                className={"h-full flex-1"}
-                contentContainerClassName={"flex flex-col justify-between"}
+                className={scrollViewClassName ?? "h-full flex-1"}
+                contentContainerClassName={scrollViewContainerClassName ?? "flex flex-col justify-between"}
             >
                 {children}
             </ScrollView>
-            <View className={"py-6 w-full px-6 border-t border-black bg-white"}>
+            <View className={`py-6 w-full px-6 border-t border-black bg-white ${footerClassName}`}>
+                {footer}
             </View>
         </View>
     )
