@@ -61,7 +61,7 @@ export default function ActivitySubmissionPage({ navigation, route }: Props) {
                     </Text>
                 </View>
                 <View className={"bg-white p-4 h-full"}>
-                    <View className={"absolute bottom-0 left-0 w-full m-4"} style={{ marginBottom: 280 }}>
+                    <View className={"absolute bottom-0 left-0 w-full m-4"} style={{ marginBottom: 300 }}>
                         <Themed.PrimaryActionButton.Container
                             onClick={() => navigation.pop()}
                         >
