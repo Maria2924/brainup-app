@@ -5,6 +5,7 @@ import {Subject} from "../../../components/subjects/Subject";
 import {CoursesLayouts} from "../layouts/CoursesLayouts";
 import {Activity, Assessment, Module} from "../../../types/course";
 import {Themed} from "../../../components/themed/Themed";
+import {toast} from "../../../utils/toast";
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Subject', 'CourseNavigator'>;
 export default function SubjectPage(props: Props) {
@@ -29,7 +30,26 @@ export default function SubjectPage(props: Props) {
                 }}
             >
                 {props.route.params.subject.assessments.slice(0,2).map((assessment: Assessment) => (
-                    <Themed.SemiRoundedPressable text={assessment.name} key={assessment.id}/>
+                    <Themed.SemiRoundedPressable
+                        text={assessment.name}
+                        key={assessment.id}
+                        onPress={() => {
+                            if (!assessment.score) {
+                                props.navigation.navigate("CourseNavigator", {
+                                    screen: "TakeAssessmentWarning",
+                                    params: {
+                                        title: assessment.name,
+                                        onContinue: () => {}
+                                    }
+                                })
+                            } else {
+                                toast(
+                                    "You've already taken this assessment!",
+                                    "You can no longer take this assessment anymore as you've already taken it."
+                                )
+                            }
+                        }}
+                    />
                 ))}
             </Subject.Section>
             <Subject.Section
