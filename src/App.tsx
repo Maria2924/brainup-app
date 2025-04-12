@@ -65,7 +65,7 @@ export function App() {
             }}
         >
             <StatusBar barStyle={"dark-content"} animated={true}/>
-            <Stack.Navigator initialRouteName={"HomeNavigator"}>
+            <Stack.Navigator initialRouteName={"AuthNavigator"}>
                 <Stack.Screen
                     name={"AuthNavigator"}
                     component={AuthNavigator}
