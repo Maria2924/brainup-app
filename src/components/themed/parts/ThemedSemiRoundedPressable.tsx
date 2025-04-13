@@ -22,7 +22,7 @@ export default function ThemedSemiRoundedPressable({ text, children, color, onPr
             className={`flex flex-row w-full justify-between p-4 rounded-tr-lg rounded-bl-lg border border-black items-center`}
         >
             <View className={"flex flex-col"}>
-                <Text className={"text-xl leading-none text-[#303030] font-insM max-w-xs"}>{text}</Text>
+                <Text className={"text-xl leading-none text-[#303030] font-insM max-w-60"}>{text}</Text>
                 {children}
             </View>
             {!hideRightArrow && (
