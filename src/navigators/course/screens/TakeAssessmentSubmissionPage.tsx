@@ -1,4 +1,4 @@
-import {Text, View} from "react-native";
+import {Platform, Text, View} from "react-native";
 import * as React from "react";
 import {NativeStackScreenProps} from "@react-navigation/native-stack";
 import {RootStackParamList} from "../../types";
@@ -29,7 +29,7 @@ export default function TakeAssessmentSubmissionPage({ navigation, route }: Prop
                 </Text>
             </View>
             <View className={"bg-white p-4 h-full"}>
-                <View className={"absolute bottom-0 left-0 w-full m-4"} style={{ marginBottom: score ? 280 : 300 }}>
+                <View className={"absolute bottom-0 left-0 w-full m-4"} style={{ marginBottom: Platform.OS === "ios" ? score ? 280 : 300 : 200 }}>
                     <Themed.PrimaryActionButton.Container onClick={() => navigation.replace("HomeNavigator", {
                         screen: "Home",
                     })}>

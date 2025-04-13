@@ -1,13 +1,13 @@
-import {ScrollView, Text, TouchableOpacity, View} from "react-native";
-import {ArrowLeft, ArrowRight} from "lucide-react-native";
+import {Platform, ScrollView, Text, TouchableOpacity, View} from "react-native";
+import {ArrowLeft} from "lucide-react-native";
 import * as React from "react";
 
 export default function CoursesSubjectViewAllPartLayout({ subject, part, children, navigation }: { subject: string, part: string, children: React.ReactNode, navigation: any}) {
     return (
         <View
-            className={"flex-1 flex flex-col gap-2 justify-between bg-[#D9D9D9]"}
+            className={"flex-1 flex flex-col gap-2 justify-between bg-[#D9D9D9] "}
         >
-            <View className="flex flex-col justify-between px-6 py-20 pb-6 bg-white border-b border-b-black">
+            <View className={`flex flex-col justify-between px-6 ${Platform.OS === "ios" ? "py-20" : "pt-10"} pb-6 bg-white border-b border-b-black`}>
                 <View className={"flex flex-row items-center justify-between"}>
                     <TouchableOpacity
                         onPress={() => navigation.pop()}

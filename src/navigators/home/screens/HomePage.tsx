@@ -17,7 +17,7 @@ export default function HomePage() {
             behavior={Platform.OS === 'ios' ? 'position' : undefined}
             className={"flex-1 flex flex-col gap-2 justify-between"}
         >
-            <View className="flex flex-col justify-between px-6 py-20">
+            <View className={`flex flex-col justify-between px-6 ${Platform.OS === "ios" ? "py-20" : "pt-10"}`}>
                 <View className={"flex flex-row justify-between"}>
                     <View className={"flex flex-row gap-4 items-center"}>
                         <TouchableOpacity className={"rounded-full bg-[#D9D9D9] p-1"} onPress={() => navigation.navigate('AuthNavigator', {
