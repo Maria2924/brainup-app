@@ -1,0 +1,25 @@
+diff --git a/node_modules/@rivascva/react-native-code-editor/src/CodeEditor.tsx b/node_modules/@rivascva/react-native-code-editor/src/CodeEditor.tsx
+index fc44a54..f84d5e9 100644
+--- a/node_modules/@rivascva/react-native-code-editor/src/CodeEditor.tsx
++++ b/node_modules/@rivascva/react-native-code-editor/src/CodeEditor.tsx
+@@ -214,20 +214,6 @@ const CodeEditor = (props: PropsWithForwardRef): JSX.Element => {
+ 
+     const handleKeyPress = (e: NativeSyntheticEvent<TextInputKeyPressEventData>) => {
+         const key = e.nativeEvent.key;
+-        switch (key) {
+-            case 'Enter':
+-                setTimeout(() => {
+-                    setValue((curr) => addIndentation(curr));
+-                }, 10);
+-                break;
+-            default:
+-                if (Braces.isOpenBrace(key)) {
+-                    setTimeout(() => {
+-                        setValue((curr) => addClosingBrace(curr, key));
+-                    }, 10);
+-                }
+-                break;
+-        }
+         if (onKeyPress) {
+             onKeyPress(key);
+         }
