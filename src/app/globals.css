@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    .safe-area-view {
+        @apply py-12 lg:py-4 px-4;
+    }
+    .safe-area-x {
+        @apply px-4;
+    }
+    .safe-area-y {
+        @apply py-12 lg:py-4;
+    }
+    .safe-area-t {
+        @apply pt-12 lg:pt-4;
+    }
+}
+
+@layer utilities {
+    .hover-opacity {
+        @apply hover:opacity-50 transition ease-in-out duration-500;
+    }
+}
+
+.instrument {
+    font-family: "Instrument Sans", sans-serif;
+}

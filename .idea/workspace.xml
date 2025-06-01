@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e0ad4a8d-dbc2-44d8-89e6-6275fdc71cb3" name="Changes" comment="+fix: scaling issues on different screens">
+      <change afterPath="$PROJECT_DIR$/public/icons/logo/brainup-32x32-4x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/logo/brainup-32x32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/logo/brainup.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/fetchAuthenticated.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/auth/create-account/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/auth/login/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/course/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/enroll-courses/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/enroll/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/home/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/lesson/assessment/question/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/lesson/assessment/warning/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/lesson/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/lesson/view-entities/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UniversalErrorCard.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/course/course.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/course/pressables/CoursePressable.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/course/pressables/SubjectPressable.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/layouts/EntityLayout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/layouts/SecondaryEntityLayout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/logo/Logo.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/themed/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/themed/inputs/ThemedDateBirthInput.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/themed/inputs/ThemedTextInput.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/config/conf.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/useUser.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/auth.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/laravel.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/question.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/navigation.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/babel.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gesture-handler.native.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gesture-handler.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nativewind-env.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Logo.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/courses/course.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/courses/parts/CoursePressable.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layouts/LayoutParts.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layouts/parts/Header.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layouts/parts/LightContainer.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/subjects/Subject.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/subjects/parts/Section.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/themed/Themed.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/themed/parts/ThemedBirthDateInput.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/themed/parts/ThemedPrimaryActionButton.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/themed/parts/ThemedSemiRoundedPressable.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/themed/parts/ThemedTextInput.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/global.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mocks/subjects.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/navigators/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/navigators/auth/AuthNavigator.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/navigators/auth/screens/LoginPage.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/navigators/auth/screens/RegisterPage.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/navigators/course/CourseNavigator.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/navigators/course/layouts/CoursesLayouts.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/navigators/course/layouts/CoursesMajorPartLayout.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/navigators/course/layouts/CoursesSubjectViewAllPartLayout.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/navigators/course/screens/ActivitiesPage.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/navigators/course/screens/ActivitySubmissionPage.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/navigators/course/screens/AssessmentsPage.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/navigators/course/screens/CoursePage.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/navigators/course/screens/ModulesPage.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/navigators/course/screens/SubjectPage.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/navigators/course/screens/TakeAssessment.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/navigators/course/screens/TakeAssessmentSubmissionPage.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/navigators/course/screens/TakeAssessmentWarningPage.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/navigators/course/screens/ViewModulePage.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/navigators/home/HomeNavigator.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/navigators/home/screens/HomePage.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/navigators/types.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/commons.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/course.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/course.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/toast.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/useLanguage.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="feature/pages" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ShindouMihou&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Maria2924/brainup-app.git&quot;,
+    &quot;accountId&quot;: &quot;eecc052c-b688-438b-affd-469dc4ab325b&quot;
+  }
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/node_modules/@rivascva/react-native-code-editor/src/CodeEditor.tsx" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2vIjGhRVwUA7JBlFVJOfCS3Odcz" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;build/capacitor&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/shindoumihou/WebstormProject/brainup-app/src/components/course/pressables&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/shindoumihou/WebstormProject/brainup-app/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="ReactDesignerToolWindowState">
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.intellij.reactbuddy.reactComponents" value="false" />
+        <entry key="com.intellij.reactbuddy.reactInspector" value="false" />
+        <entry key="com.intellij.reactbuddy.storybook" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/course/pressables" />
+      <recent name="$PROJECT_DIR$/public/icons/logo" />
+      <recent name="$PROJECT_DIR$/assets" />
+      <recent name="$PROJECT_DIR$/src/navigators/course/screens" />
+      <recent name="$PROJECT_DIR$/src/components" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/subject" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/components/themed/parts" />
+      <recent name="$PROJECT_DIR$/src/components/themed" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-WS-243.22562.222" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e0ad4a8d-dbc2-44d8-89e6-6275fdc71cb3" name="Changes" comment="" />
+      <created>1743839387137</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1743839387137</updated>
+      <workItem from="1743839388166" duration="51096000" />
+      <workItem from="1744509866272" duration="9726000" />
+      <workItem from="1748070394608" duration="22975000" />
+      <workItem from="1748726992690" duration="9663000" />
+    </task>
+    <task id="LOCAL-00001" summary="init: Expo application in React Native&#10;+page: Login">
+      <option name="closed" value="true" />
+      <created>1743927844545</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1743927844545</updated>
+    </task>
+    <task id="LOCAL-00002" summary="+page: Register">
+      <option name="closed" value="true" />
+      <created>1743930754696</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1743930754696</updated>
+    </task>
+    <task id="LOCAL-00003" summary="+component: ThemedPrimaryActionButton&#10;+types: react-navigation">
+      <option name="closed" value="true" />
+      <created>1743935557448</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1743935557448</updated>
+    </task>
+    <task id="LOCAL-00004" summary="+page: HomePage&#10;+fix: Register KeyboardAvoidingView not working properly">
+      <option name="closed" value="true" />
+      <created>1743937202076</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1743937202076</updated>
+    </task>
+    <task id="LOCAL-00005" summary="+page: CoursePage&#10;+page: SubjectPage&#10;+fix: always on splashscreen">
+      <option name="closed" value="true" />
+      <created>1743951834031</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1743951834031</updated>
+    </task>
+    <task id="LOCAL-00006" summary="+feature: Modules in SubjectPage">
+      <option name="closed" value="true" />
+      <created>1743956291761</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1743956291761</updated>
+    </task>
+    <task id="LOCAL-00007" summary="+refactor: Componentize for easy reusable in Course">
+      <option name="closed" value="true" />
+      <created>1743958875062</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1743958875062</updated>
+    </task>
+    <task id="LOCAL-00008" summary="+fix: Assessments page is somehow called Activities">
+      <option name="closed" value="true" />
+      <created>1743958995398</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1743958995398</updated>
+    </task>
+    <task id="LOCAL-00009" summary="+add: unversioned files">
+      <option name="closed" value="true" />
+      <created>1743983104217</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1743983104217</updated>
+    </task>
+    <task id="LOCAL-00010" summary="+fix: typings">
+      <option name="closed" value="true" />
+      <created>1744462908223</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1744462908223</updated>
+    </task>
+    <task id="LOCAL-00011" summary="+chore: remove unused imports">
+      <option name="closed" value="true" />
+      <created>1744462935760</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1744462935760</updated>
+    </task>
+    <task id="LOCAL-00012" summary="+add: use deterministic, hashed text for determining bg color for pressables">
+      <option name="closed" value="true" />
+      <created>1744464291901</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1744464291901</updated>
+    </task>
+    <task id="LOCAL-00013" summary="+add: use random hsl color from text instead of predetermined colors">
+      <option name="closed" value="true" />
+      <created>1744464498516</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1744464498516</updated>
+    </task>
+    <task id="LOCAL-00014" summary="+chore: readjust components to be reusable">
+      <option name="closed" value="true" />
+      <created>1744464978063</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1744464978063</updated>
+    </task>
+    <task id="LOCAL-00015" summary="+fix: status bar not properly colored">
+      <option name="closed" value="true" />
+      <created>1744465552146</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1744465552146</updated>
+    </task>
+    <task id="LOCAL-00016" summary="+add: Warning before taking an assessment">
+      <option name="closed" value="true" />
+      <created>1744467390995</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1744467390995</updated>
+    </task>
+    <task id="LOCAL-00017" summary="+add: assessment page with compiler">
+      <option name="closed" value="true" />
+      <created>1744479066750</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1744479066750</updated>
+    </task>
+    <task id="LOCAL-00018" summary="+add: view module page">
+      <option name="closed" value="true" />
+      <created>1744483651259</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1744483651259</updated>
+    </task>
+    <task id="LOCAL-00019" summary="+add: activity submission page">
+      <option name="closed" value="true" />
+      <created>1744485769985</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1744485769985</updated>
+    </task>
+    <task id="LOCAL-00020" summary="+remove: &quot;View All&quot; in Course Overview in Homepage">
+      <option name="closed" value="true" />
+      <created>1744485797819</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1744485797819</updated>
+    </task>
+    <task id="LOCAL-00021" summary="+chore: reuse the Course Pressable in Homepage">
+      <option name="closed" value="true" />
+      <created>1744486102409</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1744486102409</updated>
+    </task>
+    <task id="LOCAL-00022" summary="+chore: add proper mock data for each courses and subjects">
+      <option name="closed" value="true" />
+      <created>1744486605149</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1744486605149</updated>
+    </task>
+    <task id="LOCAL-00023" summary="+fix: too wide of text in ThemedSemiRoundedPressable.tsx">
+      <option name="closed" value="true" />
+      <created>1744486678960</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1744486678960</updated>
+    </task>
+    <task id="LOCAL-00024" summary="+fix: activity submission page okay button is too close to the end">
+      <option name="closed" value="true" />
+      <created>1744486767010</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1744486767010</updated>
+    </task>
+    <task id="LOCAL-00025" summary="+chore: set default route to AuthNavigator">
+      <option name="closed" value="true" />
+      <created>1744486813974</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1744486813974</updated>
+    </task>
+    <task id="LOCAL-00026" summary="+fix: NaN on BirthDateInput&#10;+add: fixed width for BirthDateInput">
+      <option name="closed" value="true" />
+      <created>1744487382982</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1744487382982</updated>
+    </task>
+    <task id="LOCAL-00027" summary="+add: fixed height for text input">
+      <option name="closed" value="true" />
+      <created>1744487476324</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1744487476324</updated>
+    </task>
+    <task id="LOCAL-00028" summary="+fix: reduce rem size">
+      <option name="closed" value="true" />
+      <created>1744515105653</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1744515105653</updated>
+    </task>
+    <task id="LOCAL-00029" summary="+fix: scaling issues on different screens">
+      <option name="closed" value="true" />
+      <created>1744515688239</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1744515688239</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="+page: CoursePage&#10;+page: SubjectPage&#10;+fix: always on splashscreen" />
+    <MESSAGE value="+feature: Modules in SubjectPage" />
+    <MESSAGE value="+refactor: Componentize for easy reusable in Course" />
+    <MESSAGE value="+fix: Assessments page is somehow called Activities" />
+    <MESSAGE value="+add: unversioned files" />
+    <MESSAGE value="+fix: typings" />
+    <MESSAGE value="+chore: remove unused imports" />
+    <MESSAGE value="+add: use deterministic, hashed text for determining bg color for pressables" />
+    <MESSAGE value="+add: use random hsl color from text instead of predetermined colors" />
+    <MESSAGE value="+chore: readjust components to be reusable" />
+    <MESSAGE value="+fix: status bar not properly colored" />
+    <MESSAGE value="+add: Warning before taking an assessment" />
+    <MESSAGE value="+add: assessment page with compiler" />
+    <MESSAGE value="+add: view module page" />
+    <MESSAGE value="+add: activity submission page" />
+    <MESSAGE value="+remove: &quot;View All&quot; in Course Overview in Homepage" />
+    <MESSAGE value="+chore: reuse the Course Pressable in Homepage" />
+    <MESSAGE value="+chore: add proper mock data for each courses and subjects" />
+    <MESSAGE value="+fix: too wide of text in ThemedSemiRoundedPressable.tsx" />
+    <MESSAGE value="+fix: activity submission page okay button is too close to the end" />
+    <MESSAGE value="+chore: set default route to AuthNavigator" />
+    <MESSAGE value="+fix: NaN on BirthDateInput&#10;+add: fixed width for BirthDateInput" />
+    <MESSAGE value="+add: fixed height for text input" />
+    <MESSAGE value="+fix: reduce rem size" />
+    <MESSAGE value="+fix: scaling issues on different screens" />
+    <option name="LAST_COMMIT_MESSAGE" value="+fix: scaling issues on different screens" />
+  </component>
+</project>

@@ -1,43 +1,39 @@
-import {Entity, WithId} from "./commons";
-
-export type Course = Entity & {
-    description: string,
-    subjects: Subject[]
+export type Course = {
+    id: number;
+    name: string;
+    description: string;
+    category_id: number | null;
+    course_level: "beginner" | "intermediate" | "advanced";
+    duration: number
+    status: "draft" | "published" | "archived";
+    created_at: string;
+    updated_at: string;
 }
 
-export type Subject = Entity & {
-    description: string,
-    assessments: Assessment[],
-    activities: Activity[],
-    modules: Module[]
+export type EnrolledCourse = Course & {
+    currently_enrolled: boolean;
 }
 
-export type Assessment = Entity & {
-    questions: Question[],
-    score: { received: number, max: number } | null
+export type Lesson = {
+    id: number;
+    title: string;
+    video_url: string;
+    content: string;
+    order: number;
+    created_at: string;
+    updated_at: string;
 }
 
-export type Activity = Entity & {
-    text: string,
-    status: "submitted" | "unanswered"
-}
-
-export type Module = Entity & {
-    text: string,
-    attachments: {name: string, source: string}[]
-};
-export type Question = WithId & {
-    text: string,
-    type: "code" | "single_choice",
-    choices?: (WithId & { text: string })[],
-    language?: CodingLanguage
-}
-
-export type Compilers = ("java2400" | "kotlinc2100" | "python310" | "g142");
-export type CodingLanguages = ("java" | "kotlin" | "python" | "c" | "cpp");
-export type CodingLanguagesName = ("Java" | "Kotlin" | "Python" | "C" | "C++");
-export type CodingLanguage = {
-    code: CodingLanguages,
-    text: CodingLanguagesName,
-    compiler: Compilers;
+export type Activity = {
+    id: number;
+    lesson_id: number;
+    question: string;
+    options: { [key: string]: string } | null;
+    answer: string;
+    type: "single_choice" | "multiple_choice" | "long_answer" | "true_false";
+    user_answered: boolean;
+    user_answer: {
+        user_answer: string | null;
+        is_correct: boolean;
+    };
 }

@@ -1,6 +1,0 @@
-Navigator Conventions:
-1. Each navigator should have a folder where the navigator will be placed.
-2. Each navigation folder will have another folder called `screens` where the screens will be placed.
-3. Each screen should end with the suffix of "Page" if it is a page.
-4. Screens can contain dedicated components under a separate component folder outside of the navigator folder (e.g. %ROOT/components).
-5. When requiring params, always add the paramm to the types.d.ts
