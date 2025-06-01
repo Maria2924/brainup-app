@@ -4,94 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0ad4a8d-dbc2-44d8-89e6-6275fdc71cb3" name="Changes" comment="+fix: scaling issues on different screens">
-      <change afterPath="$PROJECT_DIR$/public/icons/logo/brainup-32x32-4x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/logo/brainup-32x32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/logo/brainup.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/fetchAuthenticated.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/auth/create-account/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/auth/login/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/course/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/enroll-courses/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/enroll/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/home/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/lesson/assessment/question/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/lesson/assessment/warning/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/lesson/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/lesson/view-entities/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UniversalErrorCard.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/course/course.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/course/pressables/CoursePressable.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/course/pressables/SubjectPressable.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/layouts/EntityLayout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/layouts/SecondaryEntityLayout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/logo/Logo.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/themed/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/themed/inputs/ThemedDateBirthInput.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/themed/inputs/ThemedTextInput.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config/conf.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/useUser.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/auth.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/laravel.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/question.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/navigation.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/babel.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gesture-handler.native.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gesture-handler.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metro.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nativewind-env.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Logo.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/courses/course.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/courses/parts/CoursePressable.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layouts/LayoutParts.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layouts/parts/Header.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layouts/parts/LightContainer.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/subjects/Subject.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/subjects/parts/Section.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/themed/Themed.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/themed/parts/ThemedBirthDateInput.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/themed/parts/ThemedPrimaryActionButton.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/themed/parts/ThemedSemiRoundedPressable.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/themed/parts/ThemedTextInput.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/global.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mocks/subjects.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/navigators/README" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/navigators/auth/AuthNavigator.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/navigators/auth/screens/LoginPage.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/navigators/auth/screens/RegisterPage.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/navigators/course/CourseNavigator.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/navigators/course/layouts/CoursesLayouts.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/navigators/course/layouts/CoursesMajorPartLayout.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/navigators/course/layouts/CoursesSubjectViewAllPartLayout.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/navigators/course/screens/ActivitiesPage.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/navigators/course/screens/ActivitySubmissionPage.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/navigators/course/screens/AssessmentsPage.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/navigators/course/screens/CoursePage.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/navigators/course/screens/ModulesPage.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/navigators/course/screens/SubjectPage.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/navigators/course/screens/TakeAssessment.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/navigators/course/screens/TakeAssessmentSubmissionPage.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/navigators/course/screens/TakeAssessmentWarningPage.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/navigators/course/screens/ViewModulePage.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/navigators/home/HomeNavigator.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/navigators/home/screens/HomePage.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/navigators/types.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/commons.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/course.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/course.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/toast.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/useLanguage.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" />
+    <list default="true" id="e0ad4a8d-dbc2-44d8-89e6-6275fdc71cb3" name="Changes" comment="+add: initial capacitor with api integrated">
+      <change beforePath="$PROJECT_DIR$/src/app/lesson/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lesson/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,7 +112,7 @@
       <workItem from="1743839388166" duration="51096000" />
       <workItem from="1744509866272" duration="9726000" />
       <workItem from="1748070394608" duration="22975000" />
-      <workItem from="1748726992690" duration="9663000" />
+      <workItem from="1748726992690" duration="9766000" />
     </task>
     <task id="LOCAL-00001" summary="init: Expo application in React Native&#10;+page: Login">
       <option name="closed" value="true" />
@@ -432,7 +346,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744515688239</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="+add: initial capacitor with api integrated">
+      <option name="closed" value="true" />
+      <created>1748737856487</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1748737856487</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -450,7 +372,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="+page: CoursePage&#10;+page: SubjectPage&#10;+fix: always on splashscreen" />
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="+feature: Modules in SubjectPage" />
     <MESSAGE value="+refactor: Componentize for easy reusable in Course" />
     <MESSAGE value="+fix: Assessments page is somehow called Activities" />
@@ -475,6 +398,8 @@
     <MESSAGE value="+add: fixed height for text input" />
     <MESSAGE value="+fix: reduce rem size" />
     <MESSAGE value="+fix: scaling issues on different screens" />
-    <option name="LAST_COMMIT_MESSAGE" value="+fix: scaling issues on different screens" />
+    <MESSAGE value="+add: initial capacitor with api integrated" />
+    <option name="LAST_COMMIT_MESSAGE" value="+add: initial capacitor with api integrated" />
+    <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>

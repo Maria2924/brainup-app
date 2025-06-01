@@ -85,7 +85,9 @@ export default function SubjectPage() {
                         {lesson.data.activities && lesson.data.activities.length > 0 && (
                             <Course.Subject
                                 text={"Answer Activity"}
-                                onPress={() => navigation.redirect(`/activity?id=${id}&course=${course}`)}
+                                onPress={() => {
+                                    // navigation.redirect(`/activity?id=${id}&course=${course}`)
+                                }}
                             />
                         )}
                     </div>
