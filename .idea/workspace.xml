@@ -4,8 +4,18 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0ad4a8d-dbc2-44d8-89e6-6275fdc71cb3" name="Changes" comment="+add: initial capacitor with api integrated">
-      <change beforePath="$PROJECT_DIR$/src/app/lesson/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lesson/page.tsx" afterDir="false" />
+    <list default="true" id="e0ad4a8d-dbc2-44d8-89e6-6275fdc71cb3" name="Changes" comment="+temp: disable answer activity">
+      <change beforePath="$PROJECT_DIR$/.history/src/app/layout_20250601133026.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/src/app/layout_20250601133033.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/src/app/layout_20250601133057.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/src/app/layout_20250601133059.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/src/app/layout_20250601133101.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/src/app/layout_20250601133104.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/src/app/layout_20250601133350.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/conf.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/conf.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useUser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useUser.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +40,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -57,27 +68,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "build/capacitor",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Maria fell/Documents/BrainUp/brainup-app",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "AndroidSdkUpdater",
-    "ts.external.directory.path": "/home/shindoumihou/WebstormProject/brainup-app/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;build/capacitor&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Maria fell/Documents/BrainUp/brainup-app&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;AndroidSdkUpdater&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/shindoumihou/WebstormProject/brainup-app/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -121,7 +132,7 @@
       <workItem from="1743839388166" duration="51096000" />
       <workItem from="1744509866272" duration="9726000" />
       <workItem from="1748070394608" duration="22975000" />
-      <workItem from="1748726992690" duration="9766000" />
+      <workItem from="1748726992690" duration="11553000" />
     </task>
     <task id="LOCAL-00001" summary="init: Expo application in React Native&#10;+page: Login">
       <option name="closed" value="true" />
@@ -363,7 +374,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748737856487</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="+temp: disable answer activity">
+      <option name="closed" value="true" />
+      <created>1748737908784</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1748737908784</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -383,7 +402,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="+feature: Modules in SubjectPage" />
     <MESSAGE value="+refactor: Componentize for easy reusable in Course" />
     <MESSAGE value="+fix: Assessments page is somehow called Activities" />
     <MESSAGE value="+add: unversioned files" />
@@ -408,6 +426,7 @@
     <MESSAGE value="+fix: reduce rem size" />
     <MESSAGE value="+fix: scaling issues on different screens" />
     <MESSAGE value="+add: initial capacitor with api integrated" />
-    <option name="LAST_COMMIT_MESSAGE" value="+add: initial capacitor with api integrated" />
+    <MESSAGE value="+temp: disable answer activity" />
+    <option name="LAST_COMMIT_MESSAGE" value="+temp: disable answer activity" />
   </component>
 </project>

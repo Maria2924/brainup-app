@@ -8,26 +8,26 @@ export default function useUser() {
     const [user, setUser] = useState<UserWithAuthToken | null>(null);
     useEffect(() => {
         async function getUser() {
-            const storedUser = await Preferences.get({ key: "USER" });
-            if (storedUser.value) {
-                try {
-                    const parsedUser: UserWithAuthToken = JSON.parse(storedUser.value);
-                    setUser(parsedUser);
-                } catch (e) {
-                    console.error("Failed to parse user data:", e);
-                } finally {
-                    setStatus("done");
+            try {
+                const storedUser = await Preferences.get({ key: "USER" });
+                if (storedUser.value) {
+                    try {
+                        const parsedUser: UserWithAuthToken = JSON.parse(storedUser.value);
+                        setUser(parsedUser);
+                    } catch (e) {
+                        console.error("Failed to parse user data:", e);
+                    }
                 }
-            } else {
-                setStatus("done");
+            } finally {
+                setStatus("done")
             }
         }
         getUser();
     }, []);
 
     useEffect(() => {
-        if (status === "done" && !user) {
-            navigation.redirect("/auth/login");
+        if (status === "done" && !user && window.location.pathname !== "/auth/login") {
+            navigation.replace("/auth/login");
         }
     }, [status, user]);
 

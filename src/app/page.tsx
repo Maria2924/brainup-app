@@ -1,16 +1,31 @@
 "use client";
-import {ReactSVG} from "react-svg";
+import { redirect } from 'next/navigation';
 import {useEffect} from "react";
 import useUser from "@/hooks/useUser";
 
-export default function Home() {
+export default function Index() {
     const { user, userFetchStatus } = useUser();
     useEffect(() => {
-        if (userFetchStatus === "loading") return;
+        console.log(`Root Effect: status=${userFetchStatus}, userExists=${!!user}, path=${window.location.pathname}`);
+        if (userFetchStatus === "loading") {
+            console.log("Root Effect: Still loading user.");
+            return;
+        }
         if (user) {
-            window.location.replace("/home")
+            if (window.location.pathname === "/") {
+                console.log("Root Effect: User logged in, on root path. REDIRECTING to /home.");
+                redirect("/home");
+            } else {
+                console.log(`Root Effect: User logged in, but on path ${window.location.pathname} (not /). No redirect needed from root page logic.`);
+            }
         } else {
-            window.location.replace("/auth/login")
+            // Ensure we are not already on an auth page to prevent redirect loops to login
+            if (!window.location.pathname.startsWith("/auth/")) {
+                console.log("Root Effect: User not logged in. REDIRECTING to /auth/login.");
+                redirect("/auth/login");
+            } else {
+                console.log(`Root Effect: User not logged in, but on auth path ${window.location.pathname}. No redirect needed.`);
+            }
         }
     }, [user, userFetchStatus]);
   return (
