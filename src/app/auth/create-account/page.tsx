@@ -127,9 +127,10 @@ export default function Login() {
                                     const errors = result.data as ValidationError;
                                     setError(Object.entries(errors.errors)[0][1]);
                                 } else if ((result.data as RegisteredUserResponse)?.access_token) {
-                                    navigation.redirect("/home")
+                                    navigation.replace("/home")
                                 }
                             } catch (e) {
+                                navigation.handleNextRedirectError(e);
                                 setError(e?.message ?? "Unknown error");
                             }
                         }}

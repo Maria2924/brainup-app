@@ -12,10 +12,4 @@ export const fetchAuthenticated = (user: UserWithAuthToken, path: string, option
     };
 
     return fetch(`${config.BACKEND_URL}${path}`, requestOptions)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            return response;
-        });
 }

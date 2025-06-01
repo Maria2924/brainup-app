@@ -1,9 +1,10 @@
 import {useEffect, useState} from "react";
 import type {UserWithAuthToken} from "@/types/auth";
 import {Preferences} from "@capacitor/preferences";
-import {navigation} from "@/utils/navigation";
+import {fetchAuthenticated} from "@/api/fetchAuthenticated";
+import {redirect, RedirectType} from "next/navigation";
 
-export default function useUser() {
+export default function useUser(validate: boolean = false) {
     const [status, setStatus] = useState<"loading" | "done">("loading");
     const [user, setUser] = useState<UserWithAuthToken | null>(null);
     useEffect(() => {
@@ -13,7 +14,31 @@ export default function useUser() {
                 if (storedUser.value) {
                     try {
                         const parsedUser: UserWithAuthToken = JSON.parse(storedUser.value);
-                        setUser(parsedUser);
+                        if (validate) {
+                            const validationResult = await fetchAuthenticated(parsedUser, "/api/user", {
+                                headers: {
+                                    "Accept": "application/json",
+                                }
+                            });
+                            if (!validationResult.ok) {
+                                console.error("User validation failed, redirecting to login.");
+                                setUser(null);
+
+                                await Preferences.remove({ key: "USER" });
+                            } else {
+                                try {
+                                    await validationResult.json();
+                                    setUser(parsedUser);
+                                } catch (e) {
+                                    console.error("Failed to parse user data:", e);
+                                    setUser(null);
+
+                                    await Preferences.remove({ key: "USER" });
+                                }
+                            }
+                        } else {
+                            setUser(parsedUser);
+                        }
                     } catch (e) {
                         console.error("Failed to parse user data:", e);
                     }
@@ -27,7 +52,7 @@ export default function useUser() {
 
     useEffect(() => {
         if (status === "done" && !user && window.location.pathname !== "/auth/login") {
-            navigation.replace("/auth/login");
+            redirect("/auth/login", RedirectType.replace);
         }
     }, [status, user]);
 

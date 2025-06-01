@@ -4,18 +4,16 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0ad4a8d-dbc2-44d8-89e6-6275fdc71cb3" name="Changes" comment="+temp: disable answer activity">
-      <change beforePath="$PROJECT_DIR$/.history/src/app/layout_20250601133026.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.history/src/app/layout_20250601133033.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.history/src/app/layout_20250601133057.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.history/src/app/layout_20250601133059.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.history/src/app/layout_20250601133101.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.history/src/app/layout_20250601133104.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.history/src/app/layout_20250601133350.tsx" beforeDir="false" />
+    <list default="true" id="e0ad4a8d-dbc2-44d8-89e6-6275fdc71cb3" name="Changes" comment="+fix: Infinite loop on / render">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/fetchAuthenticated.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/fetchAuthenticated.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/auth/create-account/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/auth/create-account/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/auth/login/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/auth/login/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/enroll/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/enroll/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/lesson/assessment/question/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lesson/assessment/question/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/conf.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/conf.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hooks/useUser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useUser.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/navigation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/navigation.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +130,7 @@
       <workItem from="1743839388166" duration="51096000" />
       <workItem from="1744509866272" duration="9726000" />
       <workItem from="1748070394608" duration="22975000" />
-      <workItem from="1748726992690" duration="11553000" />
+      <workItem from="1748726992690" duration="14753000" />
     </task>
     <task id="LOCAL-00001" summary="init: Expo application in React Native&#10;+page: Login">
       <option name="closed" value="true" />
@@ -382,7 +380,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748737908784</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="+fix: Infinite loop on / render">
+      <option name="closed" value="true" />
+      <created>1748812406688</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1748812406688</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -402,7 +408,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="+refactor: Componentize for easy reusable in Course" />
     <MESSAGE value="+fix: Assessments page is somehow called Activities" />
     <MESSAGE value="+add: unversioned files" />
     <MESSAGE value="+fix: typings" />
@@ -427,6 +432,7 @@
     <MESSAGE value="+fix: scaling issues on different screens" />
     <MESSAGE value="+add: initial capacitor with api integrated" />
     <MESSAGE value="+temp: disable answer activity" />
-    <option name="LAST_COMMIT_MESSAGE" value="+temp: disable answer activity" />
+    <MESSAGE value="+fix: Infinite loop on / render" />
+    <option name="LAST_COMMIT_MESSAGE" value="+fix: Infinite loop on / render" />
   </component>
 </project>

@@ -1,3 +1,4 @@
+"use client";
 import {SimpleEntityLayout} from "@/components/layouts/SecondaryEntityLayout";
 import React from "react";
 import {Question} from "@/types/question";
@@ -35,8 +36,6 @@ export default function AssessmentQuestionPage() {
                     })}
                 </div>
             </div>
-
-
         </SimpleEntityLayout.Layout.Plain>
     )
 }

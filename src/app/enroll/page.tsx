@@ -36,8 +36,6 @@ export default function EnrollPage() {
             fetchAuthenticated(user!, `/api/student/course/${id}/enroll`, {
                 method: "POST"
             })
-                .then(res => res.json())
-                .then(res => res as { message: string })
     })
 
     if (!id) {
@@ -71,10 +69,11 @@ export default function EnrollPage() {
                             className={enroll.isLoading ? "animate-pulse" : ""}
                             onPress={() => {
                                 if (enroll.isLoading) return;
-                                enroll.refetch().then(() => {
-                                    if (enroll.isSuccess) {
+                                enroll.refetch().then((value) => {
+                                    if (value.isSuccess) {
                                         navigation.redirect("/home")
                                     } else {
+                                        console.debug("Failed to enroll in course:", enroll.error, enroll.data, enroll.status);
                                         setError("Failed to enroll in the course. Please try again later.");
                                     }
                                 });

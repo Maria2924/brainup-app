@@ -1,9 +1,11 @@
+import {redirect, RedirectType} from "next/navigation";
+
 export const navigation = {
     redirect: (url: string) => {
-        window.location.assign(url);
+        redirect(url);
     },
     replace: (url: string) => {
-        window.location.replace(url);
+        redirect(url, RedirectType.replace);
     },
     reload: () => {
         window.location.reload();
@@ -12,7 +14,12 @@ export const navigation = {
         if (window.history.length > 1) {
             window.history.back();
         } else {
-            window.location.assign('/');
+            redirect("/home", RedirectType.replace)
+        }
+    },
+    handleNextRedirectError: (e: any) => {
+        if (e === "NEXT_REDIRECT" || (e instanceof Error) && e.message === "NEXT_REDIRECT") {
+            throw e;
         }
     }
 }

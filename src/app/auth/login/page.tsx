@@ -12,7 +12,7 @@ import {Preferences} from "@capacitor/preferences";
 import {Loader2} from "lucide-react";
 import UniversalErrorCard from "@/components/UniversalErrorCard";
 
-export default function Register() {
+export default function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
@@ -102,13 +102,17 @@ export default function Register() {
                                 if (result.data?.message) {
                                     if ((result.data as ValidationError)['errors']?.['email']) {
                                         navigation.redirect("/auth/create-account");
+                                    } else if (result.data?.message === "Logged in successfully") {
+                                        navigation.replace("/home");
                                     } else {
                                         setError(result.data.message);
                                     }
                                 } else if ((result.data as LoggedInResponse)?.token) {
-                                    navigation.redirect("/home")
+                                    navigation.replace("/home")
                                 }
                             } catch (e) {
+                                navigation.handleNextRedirectError(e);
+                                console.error(e)
                                 setError(e?.message ?? "Unknown error");
                             }
                         }}
