@@ -1,6 +1,6 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
-const isDevelopmentBuild = true;
+const isDevelopmentBuild = false;
 const config: CapacitorConfig = {
   appId: 'com.greensidehub.brainup',
   appName: 'Brainup',

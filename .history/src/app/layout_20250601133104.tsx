@@ -2,7 +2,6 @@
 import "./globals.css";
 import React from "react";
 import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
-import { Suspense } from "react";
 
 const queryClient = new QueryClient();
 export default function RootLayout({children}: Readonly<{children: React.ReactNode;}>) {
