@@ -4,28 +4,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0ad4a8d-dbc2-44d8-89e6-6275fdc71cb3" name="Changes" comment="+add: Menubar on Homepage and Autoanimate">
-      <change afterPath="$PROJECT_DIR$/src/app/chat/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/lesson/activity/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/chat/AiReply.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/chat/ChatFloat.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/chat/ChatTextBar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/chat/UserReply.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/themed/inputs/ThemedTextArea.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/chat.d.ts" afterDir="false" />
+    <list default="true" id="e0ad4a8d-dbc2-44d8-89e6-6275fdc71cb3" name="Changes" comment="+add: Chat with AI">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/home/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/lesson/assessment/question/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lesson/activity/question/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/lesson/assessment/warning/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lesson/activity/warning/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/lesson/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lesson/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/course/pressables/SubjectPressable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course/pressables/SubjectPressable.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu/Menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/Menu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/themed/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/themed/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/themed/inputs/ThemedTextInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/themed/inputs/ThemedTextInput.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/conf.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/conf.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/course.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/course.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/course/pressables/CoursePressable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course/pressables/CoursePressable.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +124,7 @@
       <workItem from="1744509866272" duration="9726000" />
       <workItem from="1748070394608" duration="22975000" />
       <workItem from="1748726992690" duration="15751000" />
-      <workItem from="1748952870833" duration="11522000" />
+      <workItem from="1748952870833" duration="12748000" />
     </task>
     <task id="LOCAL-00001" summary="init: Expo application in React Native&#10;+page: Login">
       <option name="closed" value="true" />
@@ -417,7 +398,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748954310948</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="+add: Chat with AI">
+      <option name="closed" value="true" />
+      <created>1748966578514</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1748966578514</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -437,7 +426,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="+fix: typings" />
     <MESSAGE value="+chore: remove unused imports" />
     <MESSAGE value="+add: use deterministic, hashed text for determining bg color for pressables" />
     <MESSAGE value="+add: use random hsl color from text instead of predetermined colors" />
@@ -462,6 +450,7 @@
     <MESSAGE value="+fix: Infinite loop on / render" />
     <MESSAGE value="+fix: Navigation and other related fixes" />
     <MESSAGE value="+add: Menubar on Homepage and Autoanimate" />
-    <option name="LAST_COMMIT_MESSAGE" value="+add: Menubar on Homepage and Autoanimate" />
+    <MESSAGE value="+add: Chat with AI" />
+    <option name="LAST_COMMIT_MESSAGE" value="+add: Chat with AI" />
   </component>
 </project>

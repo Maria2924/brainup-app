@@ -20,7 +20,7 @@ export default function CoursePressable({ text, onPress, color, className }: Cou
                 <div/>
                 <ArrowRight size={32}/>
             </div>
-            <h2 className={"font-medium text-[#303030] text-xl mt-6"}>{text.length > 25 ? text.slice(0, 25) + "..." : text}</h2>
+            <h2 className={`font-medium text-[#303030] text-xl mt-6 ${text.includes(" ") ? "break-normal" : "break-all"}`}>{text.length > 25 ? text.slice(0, 25) + "..." : text}</h2>
         </div>
     )
 }
