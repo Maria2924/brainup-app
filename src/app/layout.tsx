@@ -4,10 +4,20 @@ import React, {useEffect} from "react";
 import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
 import { Suspense } from "react";
 import {useAutoAnimate} from "@formkit/auto-animate/react";
+import {App} from "@capacitor/app";
+import {navigation} from "@/utils/navigation";
 
 const queryClient = new QueryClient();
 export default function RootLayout({children}: Readonly<{children: React.ReactNode;}>) {
     const [animationParent] = useAutoAnimate();
+    useEffect(() => {
+        async function registerListeners()  {
+            await App.addListener("backButton", () => {
+                navigation.goBack();
+            })
+        }
+        registerListeners()
+    }, []);
     return (
         <html lang="en">
             <head>
