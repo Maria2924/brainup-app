@@ -30,7 +30,7 @@ export type Activity = {
     question: string;
     options: { [key: string]: string } | null;
     answer: string;
-    type: "single_choice" | "multiple_choice" | "long_answer" | "true_false";
+    type: "single_choice" | "multiple_choice" | "long_answer" | "true_false" | "short_answer";
     user_answered: boolean;
     user_answer: {
         user_answer: string | null;

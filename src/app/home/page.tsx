@@ -38,7 +38,7 @@ export default function Home() {
     return (
         <div className={"safe-area-view"}>
             <div className={"mt-2 flex flex-row items-center justify-between"}>
-                <div className={"flex flex-row items-center gap-3"}>
+                <div className={"flex flex-row items-center gap-3"} key={"user-profile"}>
                     <div className={"bg-soft-gray rounded-full w-fit p-1"}>
                         <User size={26} className={"text-[#989898]"}/>
                     </div>

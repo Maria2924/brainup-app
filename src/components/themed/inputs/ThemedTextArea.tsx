@@ -2,41 +2,31 @@
 import React from "react";
 import {Eye, EyeClosed} from "lucide-react";
 
-export type ThemedTextInputProps = {
+export type ThemedTextAreaProps = {
     label?: string;
     placeholder?: string;
-    type?: React.HTMLInputTypeAttribute;
     className?: string;
     inputClassName?: string;
     bgColor?: string;
     required?: boolean;
     value?: string;
     onChange?: (value: string) => void;
-    onSubmit?: (value: string) => void;
-    min?: number;
-    max?: number;
     minLength?: number;
     maxLength?: number;
 }
-export default function ThemedTextInput(props: ThemedTextInputProps) {
+export default function ThemedTextArea(props: ThemedTextAreaProps) {
     const {
         label,
         className = "",
         inputClassName = "",
         required = false,
         placeholder = "Enter text here",
-        type = "text",
         bgColor = "bg-soft-gray",
         value,
         onChange,
-        onSubmit,
-        min,
-        max,
         maxLength,
         minLength
     } = props;
-
-    const [showPassword, setShowPassword] = React.useState(type === "text");
 
     return (
         <div className={`flex flex-col gap-2 ${className}`}>
@@ -47,35 +37,18 @@ export default function ThemedTextInput(props: ThemedTextInputProps) {
             )}
             <div
                 className={`w-full ${bgColor} bg-opacity-50 border border-faded-black flex flex-row rounded-lg items-center align-middle center justify-between p-2.5`}>
-                <input
-                    className={`${type === "password" ? "w-[90%]" : "w-full"} bg-transparent placeholder:text-[#767676] font-semibold ring-0 outline-0 outline-none ${inputClassName}`}
+                <textarea
+                    className={`w-full bg-transparent placeholder:text-[#767676] font-semibold ring-0 outline-0 outline-none ${inputClassName}`}
                     placeholder={placeholder}
-                    type={showPassword ? (type === "password" ? "text" : type) : type}
                     value={value}
                     onInput={(e) => {
                         if (onChange) {
                             onChange((e.target as HTMLInputElement).value);
                         }
                     }}
-                    onKeyDown={(e) => {
-                        if (e.key === "Enter" && onSubmit) {
-                            e.preventDefault();
-                            onSubmit((e.target as HTMLInputElement).value);
-                        }
-                    }}
-                    min={min}
-                    max={max}
                     minLength={minLength}
                     maxLength={maxLength}
-                    inputMode={type === "number" ? "numeric" : "text"}
-                    enterKeyHint={onSubmit ? "send" : "enter"}
                 />
-                {type === "password" && (
-                    <button onClick={() => setShowPassword((prev) => !prev)}>
-                        {showPassword && <EyeClosed size={18}/>}
-                        {!showPassword && <Eye size={18}/>}
-                    </button>
-                )}
             </div>
         </div>
     )

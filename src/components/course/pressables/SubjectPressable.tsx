@@ -7,8 +7,9 @@ type SubjectPressableProps = {
     onPress?: () => void;
     color?: string;
     className?: string;
+    hideIcon?: boolean;
 }
-export default function SubjectPressable({ text, onPress, color, className}: SubjectPressableProps) {
+export default function SubjectPressable({ text, onPress, color, className, hideIcon = false}: SubjectPressableProps) {
     const finalColor = color ?? generateHSLColorFromText(text);
     return (
         <div
@@ -17,7 +18,9 @@ export default function SubjectPressable({ text, onPress, color, className}: Sub
             onClick={onPress}
         >
             <h2 className={"font-medium text-[#303030] text-xl"}>{text}</h2>
-            <ArrowRight size={32}/>
+            {!hideIcon && (
+                <ArrowRight size={32}/>
+            )}
         </div>
     )
 }

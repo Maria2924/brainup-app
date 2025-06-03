@@ -19,7 +19,7 @@ export default function AssessmentQuestionPage() {
     ] as Question[];
     return (
         <SimpleEntityLayout.Layout.Plain
-            title={"Midterms Exam"}
+            title={"Activity"}
             includeBackButton={false}
         >
             <div className={"flex flex-col flex-1 min-h-full"}>

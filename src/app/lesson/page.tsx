@@ -84,9 +84,21 @@ export default function SubjectPage() {
                     <div className={"mt-4 flex flex-col gap-4"}>
                         {lesson.data.activities && lesson.data.activities.length > 0 && (
                             <Course.Subject
-                                text={"Answer Activity"}
+                                text={
+                                    lesson.data.activities.findIndex((v) => !v.user_answered) >= 0 ?
+                                        "Answer Activity" :
+                                        `Score: ${lesson.data.activities.map(v => v.user_answer.is_correct).reduce((a, b) => a + (b ? 1 : 0), 0)} / ${lesson.data.activities.length}`
+                                }
+                                hideIcon={lesson.data.activities.findIndex((v) => !v.user_answered) < 0}
                                 onPress={() => {
-                                    // navigation.redirect(`/activity?id=${id}&course=${course}`)
+                                    if (lesson.data.activities.findIndex((v) => !v.user_answered) < 0) {
+                                        return;
+                                    }
+
+                                    window.localStorage.setItem(`course[${course}]:activity[${id}]`, JSON.stringify(lesson.data.activities));
+                                    setTimeout(() => {
+                                        navigation.redirect(`/lesson/activity?id=${id}&course=${course}`);
+                                    }, 500);
                                 }}
                             />
                         )}

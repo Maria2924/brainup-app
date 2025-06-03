@@ -4,18 +4,28 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0ad4a8d-dbc2-44d8-89e6-6275fdc71cb3" name="Changes" comment="+fix: Navigation and other related fixes">
-      <change afterPath="$PROJECT_DIR$/src/components/menu/Menu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
+    <list default="true" id="e0ad4a8d-dbc2-44d8-89e6-6275fdc71cb3" name="Changes" comment="+add: Menubar on Homepage and Autoanimate">
+      <change afterPath="$PROJECT_DIR$/src/app/chat/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/lesson/activity/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/chat/AiReply.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/chat/ChatFloat.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/chat/ChatTextBar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/chat/UserReply.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/themed/inputs/ThemedTextArea.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/chat.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capacitor.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/capacitor.config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/course/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/course/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/home/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/lesson/assessment/question/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lesson/activity/question/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/lesson/assessment/warning/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lesson/activity/warning/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/lesson/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lesson/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/course/pressables/SubjectPressable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course/pressables/SubjectPressable.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu/Menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/Menu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/themed/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/themed/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/themed/inputs/ThemedTextInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/themed/inputs/ThemedTextInput.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config/conf.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/conf.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useUser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useUser.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/course.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/course.d.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +38,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -68,27 +78,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;build/capacitor&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/shindoumihou/WebstormProject/brainup-app/android&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;AndroidSdkUpdater&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/shindoumihou/WebstormProject/brainup-app/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "build/capacitor",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/shindoumihou/WebstormProject/brainup-app/src/components/themed/inputs",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "AndroidSdkUpdater",
+    "ts.external.directory.path": "/home/shindoumihou/WebstormProject/brainup-app/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -100,11 +110,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/themed/inputs" />
       <recent name="$PROJECT_DIR$/src/components/course/pressables" />
       <recent name="$PROJECT_DIR$/public/icons/logo" />
       <recent name="$PROJECT_DIR$/assets" />
       <recent name="$PROJECT_DIR$/src/navigators/course/screens" />
-      <recent name="$PROJECT_DIR$/src/components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/app/subject" />
@@ -133,7 +143,7 @@
       <workItem from="1744509866272" duration="9726000" />
       <workItem from="1748070394608" duration="22975000" />
       <workItem from="1748726992690" duration="15751000" />
-      <workItem from="1748952870833" duration="1370000" />
+      <workItem from="1748952870833" duration="11522000" />
     </task>
     <task id="LOCAL-00001" summary="init: Expo application in React Native&#10;+page: Login">
       <option name="closed" value="true" />
@@ -399,7 +409,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748815576643</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="+add: Menubar on Homepage and Autoanimate">
+      <option name="closed" value="true" />
+      <created>1748954310947</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1748954310948</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -419,7 +437,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="+add: unversioned files" />
     <MESSAGE value="+fix: typings" />
     <MESSAGE value="+chore: remove unused imports" />
     <MESSAGE value="+add: use deterministic, hashed text for determining bg color for pressables" />
@@ -444,6 +461,7 @@
     <MESSAGE value="+temp: disable answer activity" />
     <MESSAGE value="+fix: Infinite loop on / render" />
     <MESSAGE value="+fix: Navigation and other related fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="+fix: Navigation and other related fixes" />
+    <MESSAGE value="+add: Menubar on Homepage and Autoanimate" />
+    <option name="LAST_COMMIT_MESSAGE" value="+add: Menubar on Homepage and Autoanimate" />
   </component>
 </project>
