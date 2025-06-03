@@ -4,19 +4,10 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0ad4a8d-dbc2-44d8-89e6-6275fdc71cb3" name="Changes" comment="+fix: break words on course pressable">
-      <change afterPath="$PROJECT_DIR$/src/components/themed/inputs/ThemedEditor.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/languages.ts" afterDir="false" />
+    <list default="true" id="e0ad4a8d-dbc2-44d8-89e6-6275fdc71cb3" name="Changes" comment="+add: Chat with AI and Activity">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/chat/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/chat/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/lesson/activity/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lesson/activity/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/chat/AiReply.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/chat/AiReply.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/chat/ChatTextBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/chat/ChatTextBar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/themed/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/themed/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/themed/inputs/ThemedTextArea.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/themed/inputs/ThemedTextArea.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/course.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/course.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/enroll/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/enroll/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layouts/EntityLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layouts/EntityLayout.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +126,7 @@
       <workItem from="1748070394608" duration="22975000" />
       <workItem from="1748726992690" duration="15751000" />
       <workItem from="1748952870833" duration="15123000" />
-      <workItem from="1748986691874" duration="1763000" />
+      <workItem from="1748986691874" duration="2442000" />
     </task>
     <task id="LOCAL-00001" summary="init: Expo application in React Native&#10;+page: Login">
       <option name="closed" value="true" />
@@ -425,7 +416,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748968938226</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="+add: Chat with AI and Activity">
+      <option name="closed" value="true" />
+      <created>1748988491569</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1748988491569</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -445,7 +444,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="+add: use deterministic, hashed text for determining bg color for pressables" />
     <MESSAGE value="+add: use random hsl color from text instead of predetermined colors" />
     <MESSAGE value="+chore: readjust components to be reusable" />
     <MESSAGE value="+fix: status bar not properly colored" />
@@ -470,6 +468,7 @@
     <MESSAGE value="+add: Menubar on Homepage and Autoanimate" />
     <MESSAGE value="+add: Chat with AI" />
     <MESSAGE value="+fix: break words on course pressable" />
-    <option name="LAST_COMMIT_MESSAGE" value="+fix: break words on course pressable" />
+    <MESSAGE value="+add: Chat with AI and Activity" />
+    <option name="LAST_COMMIT_MESSAGE" value="+add: Chat with AI and Activity" />
   </component>
 </project>

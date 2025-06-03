@@ -26,7 +26,7 @@ export default function EnrollPage() {
                 method: "GET"
             })
                 .then(res => res.json())
-                .then(res => res as { course_details: EnrolledCourse })
+                .then(res => res as { course_details: EnrolledCourse, relationships: { category: string, instructor: string } })
     });
 
     const enroll = useQuery({
@@ -50,6 +50,8 @@ export default function EnrollPage() {
         <EntityLayout
             title={(course.isSuccess ? `${course.data.course_details.name}` : "Loading...")}
             description={course.isSuccess ? course.data.course_details.description : "Loading course details..."}
+            instructor={course.isSuccess ? course.data.relationships.instructor : undefined}
+            category={course.isSuccess ? course.data.relationships.category : undefined}
         >
             <div className={"safe-area-x"}>
                 {course.isError || error && (

@@ -1,9 +1,16 @@
 import React from "react";
 import {navigation} from "@/utils/navigation";
-import {ChevronLeft, FileVideo2, VideoIcon, Videotape} from "lucide-react";
+import {ChevronLeft, FileVideo2} from "lucide-react";
 import {Browser} from "@capacitor/browser";
 
-export default function EntityLayout({ title, description, videoUrl, children }: { title: string, description?: string, videoUrl?: string, children: React.ReactNode}) {
+export default function EntityLayout({title, description, instructor, category, videoUrl, children }: {
+    title: string,
+    description?: string,
+    instructor?: string,
+    category?: string,
+    videoUrl?: string,
+    children: React.ReactNode
+}) {
     return (
         <div className={"pt-4 min-h-screen flex flex-col"}>
             <button className={"flex flex-row items-center justify-between safe-area-x safe-area-t"}
@@ -19,11 +26,31 @@ export default function EntityLayout({ title, description, videoUrl, children }:
                     </p>
                 </div>
             )}
+            {(instructor || category) && (
+                <div className={"flex flex-row items-center justify-between mt-4 safe-area-x"}>
+                    {instructor && (
+                        <div className={"flex flex-col"}>
+                            <h3 className={"text-sm font-bold text-dim-gray"}>Instructor</h3>
+                            <p className={"text-sm text-[#101010]"}>
+                                {instructor}
+                            </p>
+                        </div>
+                    )}
+                    {category && (
+                        <div className={"flex flex-col text-right"}>
+                            <h3 className={"text-sm font-bold text-dim-gray"}>Category</h3>
+                            <p className={"text-sm text-[#101010]"}>
+                                {category[0].toUpperCase() + category.slice(1)}
+                            </p>
+                        </div>
+                    )}
+                </div>
+            )}
             {videoUrl && (
                 <button
                     className={"mt-4 safe-area-x flex flex-row items-center gap-2 text-blue-500"}
                     onClick={() => {
-                        Browser.open({ url: videoUrl, windowName: `${title}'s Video`})
+                        Browser.open({url: videoUrl, windowName: `${title}'s Video`})
                     }}
                 >
                     <FileVideo2 size={18}/>
