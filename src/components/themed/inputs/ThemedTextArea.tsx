@@ -13,6 +13,7 @@ export type ThemedTextAreaProps = {
     onChange?: (value: string) => void;
     minLength?: number;
     maxLength?: number;
+    disabled?: boolean;
 }
 export default function ThemedTextArea(props: ThemedTextAreaProps) {
     const {
@@ -20,6 +21,7 @@ export default function ThemedTextArea(props: ThemedTextAreaProps) {
         className = "",
         inputClassName = "",
         required = false,
+        disabled = false,
         placeholder = "Enter text here",
         bgColor = "bg-soft-gray",
         value,
@@ -41,6 +43,7 @@ export default function ThemedTextArea(props: ThemedTextAreaProps) {
                     className={`w-full bg-transparent placeholder:text-[#767676] font-semibold ring-0 outline-0 outline-none ${inputClassName}`}
                     placeholder={placeholder}
                     value={value}
+                    disabled={disabled}
                     onInput={(e) => {
                         if (onChange) {
                             onChange((e.target as HTMLInputElement).value);

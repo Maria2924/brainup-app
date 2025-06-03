@@ -11,7 +11,7 @@ export default function UserReply({ message }: UserReplyProps) {
                     <User size={20} color="black"/>
                 </span>
             </div>
-            <div className={"flex bg-white p-3 rounded-lg text-faded-black"}>
+            <div className={"flex bg-white p-3 rounded-lg text-faded-black max-w-[80%] break-words overflow-scroll"}>
                 <p>{message}</p>
             </div>
         </div>

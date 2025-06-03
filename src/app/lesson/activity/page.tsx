@@ -5,11 +5,12 @@ import {useSearchParams} from "next/navigation";
 import {navigation} from "@/utils/navigation";
 import {SimpleEntityLayout} from "@/components/layouts/SecondaryEntityLayout";
 import SubjectPressable from "@/components/course/pressables/SubjectPressable";
-import {Loader2} from "lucide-react";
+import {Loader2, Pen, SendHorizonal} from "lucide-react";
 import {Themed} from "@/components/themed";
 import UniversalErrorCard from "@/components/UniversalErrorCard";
 import {fetchAuthenticated} from "@/api/fetchAuthenticated";
 import useUser from "@/hooks/useUser";
+import {clangs} from "@/utils/languages";
 
 export default function ActivityPage() {
     const {user} = useUser();
@@ -27,6 +28,15 @@ export default function ActivityPage() {
 
     const [status, setStatus] = useState("ok" as "loading" | "ok" | "error");
     const [error, setError] = useState(null as string | null);
+
+    const [compilationState, setCompilationState] = useState({
+        state: "none",
+        output: ""
+    } as {
+        state: "none" | "compiling" | "compiled",
+        output: string,
+        controller: AbortController | null,
+    });
 
     const activity = activities ? activities[currentActivity] : null;
 
@@ -95,8 +105,73 @@ export default function ActivityPage() {
 
             setStatus("ok");
             setStatefulAnswer(null);
+            setCompilationState({ state: "none", output: "", controller: null });
             setCurrentActivity(currentActivity + 1);
         })
+    }
+
+    const runCode = async (language: string) => {
+        const abortController = new AbortController();
+        setCompilationState({ state: "compiling", output: "Compiling...", controller: abortController })
+        console.debug(`Compiling using ${language}.`)
+        const response = await fetch(`https://godbolt.org/api/compiler/${clangs.getCompiler(language)}/compile`, {
+            method: "POST",
+            body: JSON.stringify({
+                source: answer.current,
+                options: {
+                    "compilerOptions": {
+                        "executorRequest": true
+                    },
+                    "filters": {
+                        "execute": true
+                    },
+                }
+            }),
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            signal: abortController.signal
+        });
+        if (response.status === 200) {
+            try {
+                const text = await response.text();
+                console.debug(text)
+
+                setTimeout(() => {
+                    setCompilationState({
+                        state: "compiled",
+                        output: text,
+                        controller: null,
+                    });
+                }, 250);
+                return
+            } catch (e: any) {
+                setTimeout(() => {
+                    setCompilationState({
+                        state: "compiled",
+                        output: `An error occurred: ${e}`,
+                        controller: null,
+                    })
+                }, 250);
+                console.debug("err", e)
+            }
+        }
+        const body = await response.json();
+        setTimeout(() => {
+            setCompilationState({
+                state: "compiled",
+                output: `An error occurred: ${JSON.stringify(body)}`,
+                controller: null,
+            })
+        }, 250);
+    }
+
+    const endRunningCode = () => {
+        if (compilationState.controller) {
+            compilationState.controller.abort();
+        }
+
+        setCompilationState({ state: "none", output: "", controller: null });
     }
 
     if (!confirmedWarning) {
@@ -153,7 +228,59 @@ export default function ActivityPage() {
                             {activity.type === "multiple_choice" && (
                                 <h4 className={"font-semibold text-xs"}>Select one or more options<span className={"text-faded-red ml-0.5"}>*</span></h4>
                             )}
-                            {activity.options && Object.entries(activity.options).map((option) => {
+                            {activity.type === "coding" && typeof (activity.options as any) === "string" && (
+                                <div>
+                                    {compilationState.state === "none" && (
+                                        <>
+                                            <Themed.Editor
+                                                language={"kotlin"}
+                                                bgColor={"bg-white"}
+                                                label={"You need to be able to run the code to continue."}
+                                                required={false}
+                                                placeholder={`Type your ${clangs.format(activity.options as any)} code here...`}
+                                                inputClassName={"h-[24rem]"}
+                                                maxLength={2048}
+                                                value={statefulAnswer ?? ""}
+                                                onChange={(value) => {
+                                                    answer.current = value;
+                                                    setStatefulAnswer(value);
+                                                }}
+                                            />
+                                            <button
+                                                onClick={() => runCode(activity!.options as any)}
+                                                className={"mt-2 w-fit py-2 px-3 rounded-lg bg-green-600 text-white flex flex-row items-center gap-2"}
+                                                disabled={(statefulAnswer ?? "").length === 0}
+                                            >
+                                                <SendHorizonal size={14}/>
+                                                <p className={"font-medium text-xs"}>Run code</p>
+                                            </button>
+                                        </>
+                                    )}
+                                    {compilationState.state !== "none" && (
+                                        <>
+                                            <Themed.TextArea
+                                                bgColor={"bg-white"}
+                                                label={"Compilation Result"}
+                                                required={false}
+                                                inputClassName={"h-[12rem]"}
+                                                disabled={true}
+                                                value={compilationState.output
+                                                    .replace("# Compilation provided by Compiler Explorer at https://godbolt.org/\n\n", "")
+                                                    .replace("Standard out:\n", "")
+                                                    .replace("Standard error:\n", "")}
+                                            />
+                                            <div
+                                                onClick={endRunningCode}
+                                                className={`mt-2 w-fit py-2 px-3 rounded-lg ${compilationState.state === "compiling" ? "bg-yellow-600" : "bg-red-600"} text-white flex flex-row items-center gap-2`}>
+                                                {compilationState.state === "compiling" && (<Loader2 size={14} className={"animate-spin"}/>)}
+                                                {compilationState.state === "compiled" && (<Pen size={14}/>)}
+                                                <p className={"font-medium text-xs"}>{compilationState.state === "compiling" ? "Running" : "Edit"} code</p>
+                                            </div>
+                                        </>
+                                    )}
+                                </div>
+                            )}
+                            {activity.type !== "coding" && activity.options && Object.entries(activity.options).map((option) => {
                                 return (
                                     <SubjectPressable
                                         key={`option-${option[0]}`}
@@ -251,7 +378,7 @@ export default function ActivityPage() {
                         <button
                             className={"bg-primary p-2 rounded-xl font-semibold text-[#202020] items-center justify-center w-full disabled:opacity-50"}
                             onClick={nextQuestion}
-                            disabled={answer.current == null}
+                            disabled={answer.current == null || (activity.type === "coding" && compilationState.state !== "compiled")}
                         >
                             Continue
                         </button>

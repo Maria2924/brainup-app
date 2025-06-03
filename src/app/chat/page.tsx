@@ -20,8 +20,16 @@ export default function ChatPage() {
     });
 
     const [error, setError] = useState(null as string | null);
+    const isThinking =
+        chatSession.history.length > 0 &&
+        chatSession.history[chatSession.history.length - 1].role === "model" &&
+        chatSession.history[chatSession.history.length - 1].text === "$$[thinking]$$";
 
     const sendMessage = async (value: string) =>  {
+        if (isThinking) {
+            return;
+        }
+
         setChatSession((session) => {
             return {
                 ...session,
@@ -108,6 +116,7 @@ export default function ChatPage() {
                 </div>
             </div>
             <ChatTextBar
+                isThinking={isThinking}
                 onSubmit={sendMessage}
             />
         </EntityLayout>
