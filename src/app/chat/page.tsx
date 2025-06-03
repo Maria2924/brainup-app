@@ -4,7 +4,7 @@ import {MessageCircle} from "lucide-react";
 import ChatFloat from "@/components/chat/ChatFloat";
 import ChatTextBar from "@/components/chat/ChatTextBar";
 import {ChatSession} from "@/types/chat";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import UserReply from "@/components/chat/UserReply";
 import AiReply from "@/components/chat/AiReply";
 import {fetchAuthenticated} from "@/api/fetchAuthenticated";
@@ -24,6 +24,24 @@ export default function ChatPage() {
         chatSession.history.length > 0 &&
         chatSession.history[chatSession.history.length - 1].role === "model" &&
         chatSession.history[chatSession.history.length - 1].text === "$$[thinking]$$";
+
+    useEffect(() => {
+        return () => {
+            if (chatSession.session_key != "") {
+                fetchAuthenticated(user!, `/api/student/chat-session/delete?session_key=${chatSession.session_key}`, {
+                    method: "DELETE",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Accepts": "application/json"
+                    },
+                }).then((c) => {
+                    console.log(`Chat session ${chatSession} cleared.`)
+                }).catch((e) => {
+                    console.error("Failed to close chat session:", e);
+                });
+            }
+        }
+    }, []);
 
     const sendMessage = async (value: string) =>  {
         if (isThinking) {

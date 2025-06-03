@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0ad4a8d-dbc2-44d8-89e6-6275fdc71cb3" name="Changes" comment="+add: Chat with AI and Activity">
+    <list default="true" id="e0ad4a8d-dbc2-44d8-89e6-6275fdc71cb3" name="Changes" comment="+add: Instructor and Category">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/enroll/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/enroll/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layouts/EntityLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layouts/EntityLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/chat/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/chat/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +125,7 @@
       <workItem from="1748070394608" duration="22975000" />
       <workItem from="1748726992690" duration="15751000" />
       <workItem from="1748952870833" duration="15123000" />
-      <workItem from="1748986691874" duration="2442000" />
+      <workItem from="1748986691874" duration="2622000" />
     </task>
     <task id="LOCAL-00001" summary="init: Expo application in React Native&#10;+page: Login">
       <option name="closed" value="true" />
@@ -424,7 +423,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748988491569</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="+add: Instructor and Category">
+      <option name="closed" value="true" />
+      <created>1748989154961</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1748989154961</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -444,7 +451,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="+add: use random hsl color from text instead of predetermined colors" />
     <MESSAGE value="+chore: readjust components to be reusable" />
     <MESSAGE value="+fix: status bar not properly colored" />
     <MESSAGE value="+add: Warning before taking an assessment" />
@@ -469,6 +475,7 @@
     <MESSAGE value="+add: Chat with AI" />
     <MESSAGE value="+fix: break words on course pressable" />
     <MESSAGE value="+add: Chat with AI and Activity" />
-    <option name="LAST_COMMIT_MESSAGE" value="+add: Chat with AI and Activity" />
+    <MESSAGE value="+add: Instructor and Category" />
+    <option name="LAST_COMMIT_MESSAGE" value="+add: Instructor and Category" />
   </component>
 </project>
