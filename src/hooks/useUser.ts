@@ -56,8 +56,15 @@ export default function useUser(validate: boolean = false) {
         }
     }, [status, user]);
 
+    const signOut = () => {
+        Preferences.remove({ key: "USER" });
+        setUser(null);
+        redirect("/auth/login", RedirectType.replace);
+    }
+
     return {
         user,
+        signOut,
         userFetchStatus: status
     }
 }

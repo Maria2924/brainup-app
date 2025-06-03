@@ -57,7 +57,7 @@ export default function CoursePage() {
                     <>
                         <h3 className={"font-bold text-sm text-dim-gray"}>Lessons</h3>
                         <div className={"mt-4 flex flex-col gap-4"}>
-                            {course.data.relationships.lessons && course.data.relationships.lessons.map((lesson) => (
+                            {course.data.relationships?.lessons != null && course.data.relationships.lessons.length > 0 && course.data.relationships.lessons.map((lesson) => (
                                 <Course.Subject
                                     key={lesson.id}
                                     text={lesson.title}

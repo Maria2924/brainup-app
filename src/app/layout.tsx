@@ -1,11 +1,13 @@
 "use client";
 import "./globals.css";
-import React from "react";
+import React, {useEffect} from "react";
 import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
 import { Suspense } from "react";
+import {useAutoAnimate} from "@formkit/auto-animate/react";
 
 const queryClient = new QueryClient();
 export default function RootLayout({children}: Readonly<{children: React.ReactNode;}>) {
+    const [animationParent] = useAutoAnimate();
     return (
         <html lang="en">
             <head>
@@ -16,7 +18,7 @@ export default function RootLayout({children}: Readonly<{children: React.ReactNo
                     href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
                     rel="stylesheet"/>
             </head>
-            <body className={`antialiased instrument`}>
+            <body className={`antialiased instrument`} ref={animationParent}>
             <QueryClientProvider client={queryClient}>
                 <Suspense fallback={<></>}>
                     {children}

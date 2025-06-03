@@ -4,16 +4,18 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0ad4a8d-dbc2-44d8-89e6-6275fdc71cb3" name="Changes" comment="+fix: Infinite loop on / render">
+    <list default="true" id="e0ad4a8d-dbc2-44d8-89e6-6275fdc71cb3" name="Changes" comment="+fix: Navigation and other related fixes">
+      <change afterPath="$PROJECT_DIR$/src/components/menu/Menu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/fetchAuthenticated.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/fetchAuthenticated.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/auth/create-account/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/auth/create-account/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/auth/login/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/auth/login/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/enroll/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/enroll/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/lesson/assessment/question/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lesson/assessment/question/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capacitor.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/capacitor.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/course/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/course/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/home/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/conf.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/conf.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hooks/useUser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useUser.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/navigation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/navigation.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +78,7 @@
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;build/capacitor&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Maria fell/Documents/BrainUp/brainup-app&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/shindoumihou/WebstormProject/brainup-app/android&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -130,7 +132,8 @@
       <workItem from="1743839388166" duration="51096000" />
       <workItem from="1744509866272" duration="9726000" />
       <workItem from="1748070394608" duration="22975000" />
-      <workItem from="1748726992690" duration="14753000" />
+      <workItem from="1748726992690" duration="15751000" />
+      <workItem from="1748952870833" duration="1370000" />
     </task>
     <task id="LOCAL-00001" summary="init: Expo application in React Native&#10;+page: Login">
       <option name="closed" value="true" />
@@ -388,7 +391,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748812406688</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="+fix: Navigation and other related fixes">
+      <option name="closed" value="true" />
+      <created>1748815576643</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1748815576643</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -408,7 +419,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="+fix: Assessments page is somehow called Activities" />
     <MESSAGE value="+add: unversioned files" />
     <MESSAGE value="+fix: typings" />
     <MESSAGE value="+chore: remove unused imports" />
@@ -433,6 +443,7 @@
     <MESSAGE value="+add: initial capacitor with api integrated" />
     <MESSAGE value="+temp: disable answer activity" />
     <MESSAGE value="+fix: Infinite loop on / render" />
-    <option name="LAST_COMMIT_MESSAGE" value="+fix: Infinite loop on / render" />
+    <MESSAGE value="+fix: Navigation and other related fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="+fix: Navigation and other related fixes" />
   </component>
 </project>

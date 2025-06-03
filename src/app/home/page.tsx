@@ -1,15 +1,17 @@
 "use client";
-import {Search, User} from "lucide-react";
+import {Menu, User} from "lucide-react";
 import {Course} from "@/components/course/course";
 import type {Course as CourseType} from "@/types/course";
 import {navigation} from "@/utils/navigation";
+import MenuComponent from "@/components/menu/Menu";
 import useUser from "@/hooks/useUser";
 import {useQuery} from "@tanstack/react-query";
 import {fetchAuthenticated} from "@/api/fetchAuthenticated";
 import UniversalErrorCard from "@/components/UniversalErrorCard";
+import {useState} from "react";
 
 export default function Home() {
-    const { user } = useUser();
+    const { user, signOut } = useUser();
     const courses = useQuery({
         queryKey: ['courses'],
         enabled: user !== null,
@@ -20,6 +22,19 @@ export default function Home() {
                 .then(res => res.json())
                 .then(res => res as CourseType[])
     });
+
+    const [showMenu, setShowMenu] = useState(false);
+
+    if (showMenu) {
+        return (
+           <MenuComponent
+               user={user}
+               onHide={() => setShowMenu(!showMenu)}
+               signOut={signOut}
+           />
+        )
+    }
+
     return (
         <div className={"safe-area-view"}>
             <div className={"mt-2 flex flex-row items-center justify-between"}>
@@ -32,8 +47,8 @@ export default function Home() {
                         <h2 className={"font-bold text-sm text-faint-black leading-none"}>{user?.name ?? "Loading"}</h2>
                     </div>
                 </div>
-                <button>
-                    <Search size={18}/>
+                <button onClick={() => setShowMenu(!showMenu)}>
+                    <Menu size={18}/>
                 </button>
             </div>
             <div className={"mt-8"}>
